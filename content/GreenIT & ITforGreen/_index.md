@@ -4,4 +4,6 @@ title = "Green IT & IT for Green"
 weight = 2
 +++
 
-What Microsoft implements for Green Software Engineering
+Scope for Green IT & IT for Green
+
+- [Microsoft Sustainability Learning Center](https://www.microsoft.com/en-us/sustainability/learning-center)
