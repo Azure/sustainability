@@ -5,3 +5,5 @@ draft: false
 weight: 1
 ---
 
+- [Cloud Adoption Framework for Azure](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/)
+- [Azure Well Architected Framework](https://docs.microsoft.com/en-us/azure/architecture/framework/)
