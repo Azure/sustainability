@@ -1,7 +1,7 @@
 +++
 archetype = "chapter"
 title = "Green Software Engineering"
-weight = 2
+weight = 3
 +++
 
 What Microsoft implements for Green Software Engineering
