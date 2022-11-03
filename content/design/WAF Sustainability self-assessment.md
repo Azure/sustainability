@@ -2,7 +2,7 @@
 title: "WAF Sustainability self-assessment"
 date: 2022-09-22T12:50:12+01:00
 draft: false
-weight: 3
+weight: 2
 ---
 
 - [Emissions Impact Dashboard](https://www.microsoft.com/en-us/sustainability/emissions-impact-dashboard)
