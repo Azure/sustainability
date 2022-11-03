@@ -5,3 +5,5 @@ draft: false
 weight: 2
 ---
 
+
+- [Azure Well Architected Review Assessment](https://docs.microsoft.com/en-us/assessments/?mode=pre-assessment&id=azure-architecture-review)
