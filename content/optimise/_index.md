@@ -1,6 +1,6 @@
 +++
 archetype = "chapter"
-title = "Optimise architecture"
+title = "Innovate for Carbon Awareness"
 weight = 4
 +++
 
