@@ -2,7 +2,7 @@
 title: "AKS Sustainability guidance"
 date: 2022-09-27T23:32:48+01:00
 draft: false
-weight: 2
+weight: 3
 ---
 
 At the end of this step, teams should have a proposed solution diagram that meets the following requirements: 
