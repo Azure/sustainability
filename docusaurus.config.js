@@ -82,7 +82,6 @@ const config = {
           },
           ],
         },
-          ],
         },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Microsoft Open Source.`,
