@@ -82,16 +82,6 @@ const config = {
           },
           ],
         },
-        {
-          title: "LEGAL",
-          items: [{
-            label: "Trademark Policy",
-            href: "",
-          },
-          {
-            label: "Terms and Privacy Policy",
-            href: "",
-          },
           ],
         },
         ],
