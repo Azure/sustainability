@@ -81,7 +81,7 @@ const config = {
       },
       colorMode: {
         disableSwitch: true,
-        defaultMode: "light",
+        defaultMode: "dark",
       },
     }),
   plugins: [
