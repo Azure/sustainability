@@ -30,7 +30,6 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --background-color: #fbfcf6;
-  --ifm-navbar-background-color: var(--background-color);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
