@@ -74,7 +74,7 @@ const config = {
           ],
         },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Microsoft Open Source.`,
+        copyright: `By Microsoft open source community.`,
       },
       prism: {
         theme: lightCodeTheme,
