@@ -65,7 +65,7 @@ const config = {
         items: [ {
           href: "https://greensoftware.foundation/",
           position: "right",
-          label: "a Green Software Foundation project",
+          label: "Microsoft is a member of Green Software Foundation",
         },],
       },
       footer: {
@@ -74,11 +74,7 @@ const config = {
           title: "Links",
           items: [{
             label: "Github",
-            href: "https://github.com/Green-Software-Foundation/training/",
-          },
-          {
-            label: "Website",
-            href: "https://learn.greensoftware.foundation",
+            href: "https://github.com/Azure/sustainability",
           },
           ],
         },
