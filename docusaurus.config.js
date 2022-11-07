@@ -10,8 +10,8 @@ const config = {
   // Change to site description
   tagline: "Learn how to make your Azure solutions more sustainable and carbon aware",
   // Change to site url
-  url: "https://azure.github.io/sustainability/",
-  baseUrl: "/",
+  url: "https://azure.github.io",
+  baseUrl: "/sustainability/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
