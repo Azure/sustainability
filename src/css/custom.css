@@ -34,24 +34,3 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-body{
-  background-color: var(--background-color);
-}
-.navbar__brand {
-  color: var(--ifm-color-primary);
-}
-.footer--dark {
-  --ifm-footer-background-color: #032629;
-  --ifm-footer-title-color: #aecc53;
-  --ifm-footer-link-color:hsla(0,0%,100%,0.5);
-  --ifm-footer-link-hover-color: hsla(0,0%,100%,1);
-}
-.intro-logo{
-  width: 96px;
-  margin-bottom: -44px;
-  margin-top: 32px;
-}
-.navbar__item:first-of-type{
-  background-color: var(--ifm-color-primary);
-  color: white;
-}
