@@ -6,18 +6,18 @@ const lightCodeTheme = require("prism-react-renderer/themes/github");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   // Change to Site title
-  title: "Learn Green Software",
+  title: "Learn Green Software on Azure",
   // Change to site description
-  tagline: "Learn how to make your software applications more sustainable and build a career in green software",
+  tagline: "Learn how to make your Azure solutions more sustainable and carbon aware",
   // Change to site url
-  url: "https://learn.greensoftware.foundation/",
+  url: "https://azure.github.io/sustainability/",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "Green-Software-Foundation",
+  organizationName: "Microsoft",
   // Change to GitHub repo name.
-  projectName: "learn",
+  projectName: "sustainability",
   deploymentBranch: "gh-pages",
   i18n: {
     defaultLocale: "en",
@@ -33,14 +33,14 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/",
           // Change this to your repo.
-          editUrl: "https://github.com/Green-Software-Foundation/training/tree/main/",
+          editUrl: "https://github.com/Azure/sustainability/tree/main/",
         },
         blog: false,
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
         gtag: {
-          trackingID: "G-593HJXNS18",
+          trackingID: "Gqsdsd",
         },
         sitemap: {
           changefreq: "weekly",
@@ -57,16 +57,12 @@ const config = {
     ({
       navbar: {
         // Change to project name
-        title: "Green Software Practitioner",
+        title: "Green Software on Azure",
         logo: {
           alt: "Green Software Practitioner Logo",
           src: "img/logo.svg",
         },
-        items: [{
-          href: "https://training.linuxfoundation.org/training/green-software-for-practitioners-lfc131/",
-          position: "right",
-          label: "Take the course",
-        }, {
+        items: [ {
           href: "https://greensoftware.foundation/",
           position: "right",
           label: "a Green Software Foundation project",
@@ -90,32 +86,16 @@ const config = {
           title: "LEGAL",
           items: [{
             label: "Trademark Policy",
-            href: "https://greensoftware.foundation/policy/trademark",
+            href: "",
           },
           {
             label: "Terms and Privacy Policy",
-            href: "https://greensoftware.foundation/policy/terms",
-          },
-          ],
-        },
-        {
-          title: "GSF Info",
-          items: [{
-            label: "Green Software Foundation",
-            href: "https://greensoftware.foundation",
-          },
-          {
-            label: "Twitter",
-            href: "https://twitter.com/gsfcommunity",
-          },
-          {
-            label: "Linkedin",
-            href: "https://www.linkedin.com/company/green-software-foundation/",
+            href: "",
           },
           ],
         },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Joint Development Foundation Projects, LLC, Green Software Foundation Series`,
+        copyright: `Copyright © ${new Date().getFullYear()} Microsoft Open Source.`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -144,34 +124,7 @@ const config = {
             to: '/introduction',
             from: '/practitioner/introduction',
           },
-          {
-            to: '/carbon-efficiency',
-            from: '/practitioner/carbon-efficiency',
-          },
-          {
-            to: '/energy-efficiency',
-            from: '/practitioner/energy-efficiency',
-          },
-          {
-            to: '/carbon-awareness',
-            from: '/practitioner/carbon-awareness',
-          },
-          {
-            to: '/hardware-efficiency',
-            from: '/practitioner/hardware-efficiency',
-          },
-          {
-            to: '/measurement',
-            from: '/practitioner/measurement',
-          },
-          {
-            to: '/climate-commitments',
-            from: '/practitioner/climate-commitments',
-          },
-          {
-            to: '/glossary', // Note there is a spelling correction here also
-            from: '/practitioner/glossery',
-          },
+         
         ]
       },
     ],
