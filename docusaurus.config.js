@@ -59,14 +59,9 @@ const config = {
         // Change to project name
         title: "Green Software on Azure",
         logo: {
-          alt: "Green Software Practitioner Logo",
+          alt: "Green Software Logo",
           src: "img/logo.svg",
         },
-        items: [ {
-          href: "https://greensoftware.foundation/",
-          position: "right",
-          label: "Microsoft is a member of Green Software Foundation",
-        },],
       },
       footer: {
         style: "dark",
