@@ -4,13 +4,13 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
-const organizationName = 'slopezdev';
-const projectName = "github-pages-docusaurus";
+const organizationName = 'azure';
+const projectName = "sustainability";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "Green software on Azure",
+  tagline: "Learn how to build sustainable workloads on Azure.",
   url: `https://${organizationName}.github.io`,
   baseUrl: `/${projectName}/`,
   onBrokenLinks: "throw",
@@ -60,9 +60,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "My Site",
+        title: "Green software on Azure",
         logo: {
-          alt: "My Site Logo",
+          alt: "Green software on Azure",
           src: "img/logo.svg",
         },
         items: [
@@ -123,7 +123,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `by Microsoft Open Source community.`,
       },
       prism: {
         theme: lightCodeTheme,
