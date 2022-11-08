@@ -68,7 +68,7 @@ const config = {
         items: [
           {
           position: 'left',
-          to: '/category/tutorial---extras',
+          to: '/docs/category/tutorial---extras',
           label: 'docs',
           },
           { to: "/blog", label: "Blog", position: "left" },
