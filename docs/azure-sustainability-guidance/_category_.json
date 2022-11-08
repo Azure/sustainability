@@ -1,0 +1,8 @@
+{
+  "label": "Azure Sustainability Guidance",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Apply Azure sustainability design patterns when designing your worklaods."
+  }
+}
