@@ -64,7 +64,7 @@ const config = {
           position: 'left',
           type: "doc",
           docId: "intro",
-          label: 'docs',
+          label: 'Resources',
           },
           {
             href: `https://github.com/${organizationName}/${projectName}`,
@@ -80,7 +80,7 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
+                label: "Resources",
                 to: "/docs/intro",
               },
             ],
