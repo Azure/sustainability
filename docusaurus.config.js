@@ -68,7 +68,8 @@ const config = {
         items: [
           {
           position: 'left',
-          to: '/docs/category/tutorial---extras',
+          type: "doc",
+          docId: "intro",
           label: 'docs',
           },
           { to: "/blog", label: "Blog", position: "left" },
