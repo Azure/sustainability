@@ -67,7 +67,6 @@ const config = {
         },
         items: [
           {
-          type: 'default',
           position: 'left',
           to: '/category/tutorial---extras',
           label: 'docs',
