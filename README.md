@@ -1,33 +1,118 @@
-# Project
+# Deploy Docusaurus website to GitHub Pages using GitHub Actions
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+This repository is an example of deploying a Docusaurus website to GitHub Pages using GitHub Actions.
 
-As the maintainer of this project, please make a few updates:
+## Configuring the GitHub repository
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+It uses the _new_ GitHub Pages experience with GitHub Actions to deploy the website.
 
-## Contributing
+Enable this experience in _GitHub.com -> Repository -> Settings -> Pages -> Build and deployment -> Source_ by selecting _GitHub Actions_ instead of the legacy _Deploy from a branch_ option.
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+In _GitHub.com -> Repository -> Settings -> Environments_ you should see a GitHub Environment named `github-pages`.
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+## Configuring Docusaurus
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+Generate a Docusuarus website using the following command:
 
-## Trademarks
+```shell
+yarn create docusaurus <folder-name> classic --typescript
+```
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's policies.
+Make the following changes to the `docusaurus.config.js` configuration file:
+
+1. Create the constants `organizationName` and `projectName`
+   ```javascript
+   const organizationName = "<github-organization-name>";
+   const projectName = "<repository-name>";
+   ```
+1. Set the URL
+   ```javascript
+   const config = {
+     // (...)
+     url: `https://${organizationName}.github.io`,
+   };
+   const baseUrl = /${projectName}/`;
+   ```
+1. Configure the base URL
+   ```javascript
+   const config = {
+     // (...)
+     baseUrl: `/${projectName}/`,
+   };
+   ```
+1. Set the `organizationName` and `projectName` options
+
+   ```javascript
+   const organizationName = "<github-organization-name>";
+   const projectName = "<repository-name>";
+
+   const config = {
+     // (...)
+     organizationName,
+     projectName,
+   };
+   ```
+
+1. Configure the blog and docs edit URLs
+   ```javascript
+   const config = {
+     // (...)
+     presets: [
+       [
+         "classic",
+         /** @type {import('@docusaurus/preset-classic').Options} */
+         ({
+           // (...)
+           docs: {
+             // (...)
+             editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
+           },
+           blog: {
+             // (...)
+             editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
+           },
+         }),
+       ],
+     ],
+   };
+   ```
+
+## Adding a GitHub Actions deployment workflow
+
+Use a GitHub Actions workflow template for GitHub Pages from the [`actions/starter-workflows`](https://github.com/actions/starter-workflows) repository. Place it in `.github/workflows/<workflow-name>.yml`.
+
+Add steps for building the website before the GitHub Pages actions are executed and specify the `path` to the `actions/upload-pages-artifact`:
+
+```yaml
+# (...)
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      # 👇 Build steps
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: yarn
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --non-interactive
+      - name: Build
+        run: yarn build
+      # 👆 Build steps
+      - name: Setup Pages
+        uses: actions/configure-pages@v1
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # 👇 Specify build output path
+          path: build
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+```
