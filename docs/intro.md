@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# IT for Green & Green for IT
+# IT for Green & Green IT
 
 
 ## Getting Started
