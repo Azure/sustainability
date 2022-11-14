@@ -2,46 +2,19 @@
 sidebar_position: 1
 ---
 
-# Intro
+# IT for Green & Green for IT
 
-Let's discover **Docusaurus in less than 5 minutes**.
 
 ## Getting Started
 
-Get started by **creating a new site**.
+- [Microsoft Sustainability Learning Center](https://www.microsoft.com/en-us/sustainability/learning-center)
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
 
-### What you'll need
+- [Microsoft Cloud for Sustainability](https://www.microsoft.com/en-gb/sustainability/cloud)
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- [Emissions Impact Dashboard](https://www.microsoft.com/en-us/sustainability/emissions-impact-dashboard)
 
-## Generate a new site
+- [The Planetary Computer](https://planetarycomputer.microsoft.com/)
 
-Generate a new Docusaurus site using the **classic template**.
+- [Reactor: Green Tech Series](https://www.youtube.com/watch?v=xcp1sFxdMIU)
 
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
