@@ -5,28 +5,26 @@ const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 const organizationName = 'azure';
-const projectName = "sustainability";
+const repoName = "sustainaiblity"
+const projectName = "green-software";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Green software on Azure",
-  tagline: "Learn how to build sustainable workloads on Azure.",
+  title: "Build green software applications on Azure",
+  tagline: "Learn how to build applications on Azure with sustainability in mind",
   url: `https://${organizationName}.github.io`,
-  baseUrl: `/${projectName}/`,
+  baseUrl: `${repoName}/${projectName}/`,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
-  favicon: "img/favicon.ico",
+  favicon: "./static/img/favicon.ico",
+
   // GitHub Pages adds a trailing slash by default that I don't want
   trailingSlash: false,
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName, // Usually your GitHub org/user name.
-  projectName, // Usually your repo name.
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
+  organizationName,
+  repoName,
+  projectName,
+  
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
@@ -39,9 +37,6 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -57,7 +52,7 @@ const config = {
         title: "Green software on Azure",
         logo: {
           alt: "Green software on Azure",
-          src: "img/logo.svg",
+          src: "./static/img/logo.svg",
         },
         items: [
           {
@@ -67,7 +62,7 @@ const config = {
           label: 'Resources',
           },
           {
-            href: `https://github.com/${organizationName}/${projectName}`,
+            href: `https://github.com/${organizationName}/${repoName}/${projectName}`,
             label: "GitHub",
             position: "right",
           },
@@ -81,7 +76,7 @@ const config = {
             items: [
               {
                 label: "Resources",
-                to: "/docs/intro",
+                to: "./docs/intro",
               },
             ],
           },
@@ -92,14 +87,6 @@ const config = {
                 label: "Stack Overflow",
                 href: "https://stackoverflow.com/questions/tagged/docusaurus",
               },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
-              },
             ],
           },
           {
@@ -107,7 +94,7 @@ const config = {
             items: [
               {
                 label: "GitHub",
-                href: `https://github.com/${organizationName}/${projectName}`,
+                href: `https://github.com/${organizationName}/${repoName}/${projectName}`,
               },
             ],
           },
