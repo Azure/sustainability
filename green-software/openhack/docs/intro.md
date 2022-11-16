@@ -2,13 +2,14 @@
 sidebar_position: 1
 ---
 
-# IT for Green & Green IT
+# Introcuction
+
+*Elaborate on IT for Green & Green IT*
 
 
 ## Getting Started
 
 - [Microsoft Sustainability Learning Center](https://www.microsoft.com/en-us/sustainability/learning-center)
-
 
 - [Microsoft Cloud for Sustainability](https://www.microsoft.com/en-gb/sustainability/cloud)
 

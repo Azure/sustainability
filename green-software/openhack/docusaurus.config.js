@@ -10,10 +10,11 @@ const projectName = "green-software";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+
   title: "Build green software applications on Azure",
   tagline: "Learn how to build applications on Azure with sustainability in mind",
   url: `https://${organizationName}.github.io`,
-  baseUrl: `${repoName}/${projectName}/`,
+  baseUrl: `/${repoName}/${projectName}/`,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
   favicon: "./static/img/favicon.ico",
@@ -49,9 +50,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Green software on Azure",
+        title: DataTransferItemList,
         logo: {
-          alt: "Green software on Azure",
+          alt: "Build green software applications on Azure",
           src: "./static/img/logo.svg",
         },
         items: [
