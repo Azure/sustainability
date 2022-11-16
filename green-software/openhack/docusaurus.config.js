@@ -5,7 +5,7 @@ const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 const organizationName = 'azure';
-const repoName = "sustainaiblity"
+const repoName = "sustainaiblity";
 const projectName = "green-software";
 
 /** @type {import('@docusaurus/types').Config} */
