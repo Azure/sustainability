@@ -9,27 +9,27 @@
     <copyright>Microsoft Open Source Community</copyright>
     <lastBuildDate>Wed, 16 Nov 2022 15:04:29 +0100</lastBuildDate><atom:link href="http://azure.github.io/sustainability/overview/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>About this training</title>
-      <link>http://azure.github.io/sustainability/overview/about-this-training/</link>
+      <title>About this workshop</title>
+      <link>http://azure.github.io/sustainability/overview/about-this-workshop/</link>
       <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
-      <guid>http://azure.github.io/sustainability/overview/about-this-training/</guid>
+      <guid>http://azure.github.io/sustainability/overview/about-this-workshop/</guid>
       <description>Who should take this training? You will learn how to define, create, and use green software applications in this training. Regardless of the application area, industry, organization size, or programming language, it lays out the standards to assist build a shared understanding of what it means to be a green software practitioner.
 These recommendations should be studied by anybody involved in building, deploying, or managing software to make choices that significantly reduce the amount of carbon produced by their applications.</description>
     </item>
     <item>
-      <title>Our commitments</title>
-      <link>http://azure.github.io/sustainability/overview/our-commitments/</link>
+      <title>About our commitments</title>
+      <link>http://azure.github.io/sustainability/overview/about-our-commitments/</link>
       <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
-      <guid>http://azure.github.io/sustainability/overview/our-commitments/</guid>
+      <guid>http://azure.github.io/sustainability/overview/about-our-commitments/</guid>
       <description>At Azure, we consider sustainability and humanity&amp;rsquo;s reaction to climate change to be among the most significant concerns of our time.
 We think it&amp;rsquo;s still possible to make plans for a better, cleaner future. To ensure that we are adjusting and expanding alongside the world with the least amount of negative environmental impact, we have committed to putting sustainable technology at the center of our innovation.
 Info The Carbon Benefits of Cloud Computing</description>
     </item>
     <item>
-      <title>What is green software?</title>
-      <link>http://azure.github.io/sustainability/overview/what-is-green-software/</link>
+      <title>About green software?</title>
+      <link>http://azure.github.io/sustainability/overview/about-green-software/</link>
       <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
-      <guid>http://azure.github.io/sustainability/overview/what-is-green-software/</guid>
+      <guid>http://azure.github.io/sustainability/overview/about-green-software/</guid>
       <description>Software that emits the least amount of carbon is called green software, which is an emerging discipline at the intersection of climate science, software design, electricity markets, hardware, and data center design. Only three activities reduce the carbon emissions of software: energy efficiency, hardware efficiency, and carbon awareness.
 Principles Defining, building, and running green software applications requires a core set of competencies (cf. above) called principles. Independent of the application domain, industry, company size or kind, cloud provider or self-hosted, and programming language or framework, they come to a consensus on what it takes to be a green software practitioner.</description>
     </item>
