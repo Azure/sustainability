@@ -4,6 +4,7 @@ metadata:
   name: kubernetes-parallel-job2
   labels:
     jobgroup: jobexample
+    tutu: tete
 spec:
   completions: 6
   parallelism: 2

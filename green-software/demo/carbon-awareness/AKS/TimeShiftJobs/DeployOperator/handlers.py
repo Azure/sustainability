@@ -6,66 +6,113 @@ import asyncio
 import time
 import requests
 import json
-
-#prom_endpoint = os.getenv("PROM_ENDPOINT", default="https://prometheus.carbon-intensity-exporter.svc.cluster.local:9090")
-
-prom_endpoint = os.getenv("PROM_ENDPOINT", default="http://20.250.74.89:9090")
-prom_query = os.getenv("PROM_QUERY", default="carbon_intensity")
-
-def getCarbonIntensityFromProm():
+import pandas as pd
 
 
-    params={
-        'query': prom_query
-    }
-    response = requests.get(prom_endpoint+'/api/v1/query', params=params)
-    results = response.json()['data']['result']
-    if len(results) > 0:
-        carbon_intensity_value = results[0]['value'][1]
-        print("current carbon intensity (CO2eq/KWH) : " + carbon_intensity_value)
-        return int(carbon_intensity_value)
-    return None
+# utility func
+def findBestContinuousTimeSlot(jobEarliestStart, jobDeadline, jobDuration, location):
+    
+    api_request = 'https://electricitymaphack.azurewebsites.net/api/findBestContinuousTimeSlot?jobEarliestStart=%s&jobDeadline=%s&jobDuration=%s&zone=%s' % (jobEarliestStart, jobDeadline, jobDuration, location)
+    
+    response = requests.get(api_request)
 
-
-
-def getCarbonIntensityFromCarbonRating():
-    response = requests.get('https://greenapimockyaya.azurewebsites.net/api/CarbonRating')
     json_data = response.json() if response and response.status_code == 200 else None
-    carbon_rating = json_data['Rating'] if json_data and 'Rating' in json_data else None
-    return carbon_rating 
+    bestStartTime = json_data['bestStartTime'] if json_data and 'bestStartTime' in json_data else None
 
-def getCarbonIntensity():
-    #return getCarbonIntensityFromCarbonRating()
-    #return getCarbonIntensityFromProm()
-    return 200
+    print("API call: FindBestContinuousTimeSlot : jobEarliestStart=%s&jobDeadline=%s&jobDuration=%s&zone=%s" % (jobEarliestStart, jobDeadline, jobDuration, location))
+
+    print("FindBestContinuousTimeSlot results: %s" % json_data)
+
+
+
+    return bestStartTime 
 ##############################
 
 
-#Interrupt Jobs when Carbon Intensity is High
-@kopf.timer('JobInterruptor.carbon-aware-actions.kubernetes', interval=5.0) 
+# utility func
+def findMatchingJobTimeScheduler(jobnamespace, joblabels):
+
+    api = kubernetes.client.CustomObjectsApi()
+    jobTimeSchedulersList = api.list_namespaced_custom_object(
+        group="carbon-aware-actions.kubernetes",
+        version="dev",
+        namespace=jobnamespace,
+        plural="jobtimeschedulers",
+    )     
+
+    for jobtimescheduler in jobTimeSchedulersList["items"]:
+        targetJobLabels = jobtimescheduler["spec"]["jobRef"]["labels"]
+        for key in joblabels:
+            if ((key in targetJobLabels) and (joblabels[key] == targetJobLabels[key])):  #if job labels match as a taget for JobTimeScheduler Operator
+                return jobtimescheduler
+    
+    return None
+
+
+##############################
+#When Job is created/updated, suspend Job and findBestTime in the future to schedule the Job
+@kopf.on.create('jobs') 
+def SuspendAndScheduleJob(body, spec, name, namespace, status, annotations, labels, **kwargs):
+
+
+    # find Matching jobTimeScheduler for current Job
+    jobtimescheduler = findMatchingJobTimeScheduler(namespace, labels) 
+    if jobtimescheduler is None : return # No TimeScheduler found, do nothing
+    
+    jobDuration = jobtimescheduler["spec"]["jobDuration"]
+    location = jobtimescheduler["spec"]["location"]
+
+    jobDeadline_hour_minute = jobtimescheduler["spec"]["jobDeadline"]
+    #figure out the day corresponding to the deadline: today or tomorrow
+
+    currentTime = pd.Timestamp.now()
+    currentTime_string = currentTime.strftime('%Y-%m-%d %X')
+
+    jobDeadline = pd.Timestamp(jobDeadline_hour_minute)
+    
+    
+    if currentTime >= jobDeadline : jobDeadline = jobDeadline + pd.Timedelta(days=1)  #if deadline is 09:00; and current time is 20:00 => job deadline is in the following day
+
+    jobDeadline_string = jobDeadline.strftime('%Y-%m-%d %X')
+
+    # find Best time to schedule job, based on the constraints expressed in the jobTimeScheduler CRD
+    bestStartTime = findBestContinuousTimeSlot(currentTime_string, jobDeadline_string, jobDuration, location)
+
+    # Suspend Job + add annotation for bestStartTime
+    job_patch = {'spec': {'suspend': True},
+                'metadata' : {'annotations' : {
+                    'bestStartTime' : bestStartTime
+                    } }
+                }
+    api = kubernetes.client.BatchV1Api()
+    obj = api.patch_namespaced_job(name, namespace, job_patch)
+    print("Suspending newly created Job %s to be scheduled at bestTime with lowest Carbon Intensity at %s" % (name,bestStartTime))
+
+##############################
+
+
+#Resume / Unsuspend Job when it is time to run it 
+@kopf.timer('jobs', annotations={'bestStartTime': kopf.PRESENT}, field='spec.suspend', value=True, interval=5.0) 
 def interruptJobs(body, spec, name, namespace, status, annotations, **kwargs):
 
+    scheduledTimeString = annotations["bestStartTime"]
+    scheduledTime = pd.Timestamp(scheduledTimeString)
 
-    jobName = spec["jobRef"]["name"]
-    if jobName == "" or jobName is None : return 
+    currentTime = pd.Timestamp.now()
 
-    jobNamespace = "default"
+    if currentTime > scheduledTime :
+        print("Current time is %s .Reached Scheduling Time for Job %s, planned to run at %s => Running Job Now" % (currentTime, name, scheduledTime))
 
-    carbonIntensityThreshold = spec.get("pauseJobWhenCarbonIntensityAbove", -1)
-    if carbonIntensityThreshold < 0 : return
+        job_patch = {'spec': {'suspend': True},
+                'metadata' : {'annotations' : {
+                    'bestStartTime' : None
+                    } }
+                }
+        api = kubernetes.client.BatchV1Api()
+        obj = api.patch_namespaced_job(name, namespace, job_patch)
 
-    current_CarbonIntensity = getCarbonIntensity()
-
-    if current_CarbonIntensity >= carbonIntensityThreshold : 
-        job_patch = {'spec': {'suspend': True}}
-        print("Processing Job :%s ;  current carbonIntensity is %s  ; jobCarbonIntensityThreshold is %s => suspending Job" % (jobName, current_CarbonIntensity, carbonIntensityThreshold))
-    else: 
-        job_patch = {'spec': {'suspend': False}}
-        print("Processing Job : %s, current carbonIntensity is %s  ; jobCarbonIntensityThreshold is %s => resuming Job" % (jobName, current_CarbonIntensity, carbonIntensityThreshold))
-
-    api = kubernetes.client.BatchV1Api()
-    obj = api.patch_namespaced_job(jobName, jobNamespace, job_patch)
-
+    else:
+        print("Current time is %s .Still has not reached Scheduling Time for Job %s, planned to run at %s => Nothing to do." % (currentTime, name, scheduledTime))
     
 
 ##############################

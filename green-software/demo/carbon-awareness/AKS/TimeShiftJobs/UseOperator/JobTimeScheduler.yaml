@@ -1,12 +1,15 @@
 apiVersion: carbon-aware-actions.kubernetes/dev
 kind: JobTimeScheduler
 metadata:
- name: TimeShiftJobs
+ name: timeshiftjob
+ namespace: default
 spec:
   jobRef:
     name: kubernetes-parallel-job2
-    #labels: 
-    #- <> # this version of demo does not take into account labels ; could be implemented to Time Shift Jobs at the namespace level
+    labels: 
+      titi : toto    
+      tutu : tete    
 
   jobDuration: 7 # expressed in Hours
-  jobFinishedAt: "08:00" # expressed in Hours
+  jobDeadline: "09:00" # expressed in Hours ; deadline means job has finished by this time
+  location: FR # in ElectricityMap jargon : location = zone = country

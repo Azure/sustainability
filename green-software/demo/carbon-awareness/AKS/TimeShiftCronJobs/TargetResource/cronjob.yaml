@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: hello2
+  labels:
+    jobgroup: jobexample
+    tutu2: tete
+spec:
+  schedule: "* * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: hello
+            image: devopscube/kubernetes-job-demo:latest
+            args: ["5"]
+            imagePullPolicy: IfNotPresent
+          restartPolicy: OnFailure
