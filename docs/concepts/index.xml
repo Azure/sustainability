@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Concepts on Build green software applications on Azure</title>
+    <link>http://azure.github.io/sustainability/concepts/</link>
+    <description>Recent content in Concepts on Build green software applications on Azure</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Microsoft Open Source Community</copyright>
+    <lastBuildDate>Wed, 16 Nov 2022 15:04:29 +0100</lastBuildDate><atom:link href="http://azure.github.io/sustainability/concepts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Design methodologies</title>
+      <link>http://azure.github.io/sustainability/concepts/design-methodologies/</link>
+      <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
+      <guid>http://azure.github.io/sustainability/concepts/design-methodologies/</guid>
+      <description>By using these design methodologies for sustainable workloads on Azure, you can better understand how to create solutions that are more carbon-efficient, gauge your carbon footprint, and ultimately use less energy and produce fewer emissions.
+Design for business requirements Globally, different requirements apply to businesses. Be prepared for the review considerations and design recommendations offered by this design approach to result in various design decisions and trade-offs for various circumstances and organizations.</description>
+    </item>
+    <item>
+      <title>Design principles</title>
+      <link>http://azure.github.io/sustainability/concepts/design-principles/</link>
+      <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
+      <guid>http://azure.github.io/sustainability/concepts/design-principles/</guid>
+      <description>The following critical design principles for sustainability resonate with the Green Software Principles from the Green Software Foundation and extend the quality pillars of the Azure Well-Architected Framework. This set of competencies is needed to design, build, and run green software on Azure.
+Carbon efficiency Emit the least amount of carbon possible
+Carbon emissions will always occur due to our activities, but we can minimize the amount emitted per unit of work by ensuring that every gram of carbon we emit into the atmosphere brings maximum benefit.</description>
+    </item>
+    <item>
+      <title>Design areas</title>
+      <link>http://azure.github.io/sustainability/concepts/design-areas/</link>
+      <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
+      <guid>http://azure.github.io/sustainability/concepts/design-areas/</guid>
+      <description>The following critical design areas for sustainability resonate with the Green Software Principles from the Green Software Foundation and extend the quality pillars of the Azure Well-Architected Framework. This set of competencies is needed to design, build, and run green software on Azure.
+Application design When building new or updating existing applications, it&amp;rsquo;s crucial to consider how the solution will impact the climate and if there are ways to improve and optimize.</description>
+    </item>
+  </channel>
+</rss>
