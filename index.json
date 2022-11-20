@@ -1,0 +1,170 @@
+[
+  {
+    "content": "Who should take this training? You will learn how to define, create, and use green software applications in this training. Regardless of the application area, industry, organization size, or programming language, it lays out the standards to assist build a shared understanding of what it means to be a green software practitioner.\nThese recommendations should be studied by anybody involved in building, deploying, or managing software to make choices that significantly reduce the amount of carbon produced by their applications.\nLearning objectives By the end of this OpenHack, you’ll be able to:\nUnderstand key principles and philosophies of Green Software Explore the various design areas of building sustainable workloads on Azure Identify key design patterns and practices for creating a sustainable architectural foundation Prerequisites Familiarization with green software principles Experience building or operating solutions by using core infrastructure technology ",
+    "description": "",
+    "tags": null,
+    "title": "About this training",
+    "uri": "/sustainability/overview/about-this-training/"
+  },
+  {
+    "content": "Use the discussion questions to guide your architecture and build a diagram illustrating how the customer’s existing structure can be made sustainable using sustainable best practices.\nRequirements: Include all the elements from Step 1 to build your solution. Include candidate roadmap components and explain which will be introduced to the current architectural landscape. Resolve the changes across the architecture landscape: what will be removed, retired and/or maintained. Tip You can use PowerPoint or any other tool: Visio, Draw.io, LucidChart or Cacoo.\nDiscussion questions What tools are available to help measure the emissions of existing on-premises environments? How can emissions be measured in Azure? As solution designers and engineers, what do you have control over when it comes to sustainability in Azure and how does that contrast to that which Microsoft can control? What tradeoffs are required to support sustainability goals while meeting business requirements? How should you pick a suitable region to deploy to? Consider network access patterns. What VM SKUs are available to support your workload and do these translate to energy efficiency improvements? Are more appropriate services that match your workloads profile available? What scaling patterns should you implement? What tools are available to identify underutilized, redundant and non-critical capacity? How can you manage updates and patching across all of your Azure services? What are the benefits of doing so from a sustainability angle? What changes can you make to optimize your applications to minimize resource usage, beyond their overall architecture? ",
+    "description": "",
+    "tags": null,
+    "title": "Assess",
+    "uri": "/sustainability/optimize-your-workload/assess/"
+  },
+  {
+    "content": "Contoso is a highly respected business leadership academy based in London, United Kingdom with more than 150,000 members in the region and another 2,500,000 worldwide. They deliver in-person training, online seminars and Massive Open Online Courses (MOOCs).\nAmong their various cohorts there is alignment between their curriculum and the UN Sustainable Development Goals (SDGs) as well as with the UK’s Net Zero Strategy which sets our policies and proposals for decarbonizing all sectors of the UK economy to meet their net zero target by 2050.\nFurthermore, Contoso’s corporate and social responsibility (CSR) “3D strategy” defines the following key goals:\nDeeply care about their staff, their academia and their partners to build and nurture fruitful collaboration while delivering the best results. Develop best-of-breed leaders to tackle key challenges of today while mitigating the ones of tomorrow. Deploy the most sustainable, securely trusted and innovative solutions to drive benefits for their academia and also across society. Currently, the academy runs IT workloads in an on-premises datacenter where it has invested in and completed an IT modernization project approximately 2 years ago. As a result, their board has been very reluctant to adopt new cloud technologies not only due to budget constraints but also because of the reduced amount of staff dedicated to manage their environments.\nThat said, the academy was unfortunately targeted by a cybersecurity attack which compromised over 275,000 user accounts among their academia and staff compromising the access to their main MOOC portal for over two weeks. Such infrastructure was predominantly reliant on virtual machines running a frontend web-farm connected to a SQL highly-available backend system. The backend not only hosts a whole raft of material (including 70TB of video content) accounting for approximately 90% of all of their storage but is also very costly and reaching end-of-life in 14 months. The incident took a lot longer to resolve due to the lack of advanced security technology and rudimentary incident response mechanisms.\nWhen attending COP27, Contoso’s CTO met with a Microsoft representative to discuss the potential benefits of adopting Microsoft Azure in alignment with their 3D strategy to help with reducing their carbon footprint and drive adoption of advanced cloud-native services for their MOOC platform. This would allow a pivot towards other innovative use cases leveraging their pool of data through the adoption of services such as Azure Cognitive Search and Azure Video Analyzer for Media.\nAs a result, Contoso now aims to retire as much of their datacenter footprint to allow them to:\nIncrease the security posture across their infrastructure. Reduce the administrative burden on their teams by leveraging platform-as-a-service or other cloud-native services where possible. Reduce and optimize their carbon footprint as a result of adopting Microsoft Azure. For a start and based upon the above, their plan is to migrate their MOOC platform into Azure – that is the scope of this exercise.\nInfo Instructions\nRead the customer case study and current customer environment. Identify the key points of the customer case study and current environment. Use the table after the case study to make any relevant notes. Build one or two slides in preparation for the final presentation (Step 4) including the customer case study key points and main characteristics of the current customer environment. The focus of this step is becoming familiar with customer case study, while Step 2 is dedicated to solution architecture.\n",
+    "description": "",
+    "tags": null,
+    "title": "Case study",
+    "uri": "/sustainability/customer-scenario/case-study/"
+  },
+  {
+    "content": "By using these design methodologies for sustainable workloads on Azure, you can better understand how to create solutions that are more carbon-efficient, gauge your carbon footprint, and ultimately use less energy and produce fewer emissions.\nDesign for business requirements Globally, different requirements apply to businesses. Be prepared for the review considerations and design recommendations offered by this design approach to result in various design decisions and trade-offs for various circumstances and organizations. Review the design methodologies in accordance with your company priorities and requirements after establishing your requirements.\nEvaluate the design areas using the design principles Your sustainability journey should be based on the sustainability design principles and design areas listed below. Each design area’s decisions will have an impact on the other design areas. To comprehend the implications, impact, and any known trade-offs, go over the concerns and suggestions in each of the following design areas.\nIMAGE\nUnderstanding your emissions Tracking and measuring progress are crucial to achieving any sustainability goal. You’ll never be able to determine whether the efforts are worthwhile if you can’t track and measure the impact.\nFor businesses to calculate their overall carbon emissions, the Greenhouse Gas Protocol (GHG) is the most popular technique. At Microsoft, we segment our greenhouse gas (GHG) emissions into three scopes, consistent with the Greenhouse Gas Protocol:\nScope 1: Direct emissions that your activities create. Scope 2: Indirect emissions that result from the production of the electricity or heat you use. Scope 3: Indirect emissions from all other activities you’re engaged in. The Software Carbon Intensity (SCI) defined by the Green Software Foundation is specifically for evaluating the rate of software emissions and was created to encourage the eradication of those emissions. The GHG is a more general measurement applicable for all sorts of enterprises.\nIMAGE\nWith this understanding, it’s critical to consider not just the application infrastructure and hardware but also the user devices and application scalability, as they can significantly change the environmental footprint. To gain information and transparency needed to understand your carbon footprint and measure and track emissions over time, you should use tools in addition to these scoring systems.\nLearn how to track and report carbon emissions with the Emission Impact Dashboard and Microsoft Sutainability Manager.\nAnother effective method of calculating the carbon emissions of your workloads is to design a proxy solution architecture based on the SCI model discussed above. Cost, performance, infrastructure carbon emissions (if known/available), usage over time (requests, users, API calls, etc.), or any additional measurement that is pertinent to the application can all be used as proxies when creating your carbon score dashboard.\nLearn how to use cost as a proxy solution to measure carbon emissions.\nThe shared responsibility model for sustainability Sustainability is a shared responsibility between the cloud provider and the customer or partner developing platform-based applications, just as security. Even though the data centers are designed for sustainability, simply because an application is deployed on Azure does not make it sustainable. Unoptimized applications may nevertheless emit more carbon than is necessary.\nSustainability must combine the efforts of the cloud provider and the customers in designing and implementing applications.\n",
+    "description": "",
+    "tags": null,
+    "title": "Design methodologies",
+    "uri": "/sustainability/concepts/design-methodologies/"
+  },
+  {
+    "content": "The consequences of climate change are increasingly apparent, from wildfires to devastating flooding; and the scientific consensus is clear—to avert the worst effects of the rapidly changing climate, the world needs to transition to a net zero carbon emissions economy by 2050.\nIn this 3x3 (three hours a day for three days) virtual workshop, you will learn about building sustainable solutions on Azure and how they can be designed with compliance, governance, and security practices in mind.\nYou will work in small groups on a real-life customer scenario that simulates the format of an Architecture Design Session (ADS). You will create and design solutions using Azure as well as bring engagements from the commit to realization phase.\nYou will apply your skills and knowledge of architectural best practices and design patterns as well as concepts of Well-Architected Framework (WAF) to identify and architect expansion opportunities with Azure. Your final solution will include a reference architecture and a deployment plan on how to move the solution into production in the most effective way.\nAt the end of this workshop, you will be able to better help customers with architectural guidance, solution options and best practices on building solutions in Azure that also meets best practices for sustainability.\n",
+    "description": "",
+    "tags": null,
+    "title": "Overview",
+    "uri": "/sustainability/overview/"
+  },
+  {
+    "content": "Directions Groups prepare for the final presentation using the presentation checklist. Presentation checklist Warning Your final presentation must include the following slides.\nStep 1. The customer case study Customer case study key points. Main characteristics of the current customer environment. Solutions to customer needs. Responses to customer objections. Step 2. Architect a solution Proposed solution diagram that meets or exceeds all the customer requirements from the case study and customer needs sections. Use the supplied customer diagram as a starting point. Step 3. Apply WAF practices Confirmation the proposed solution architecture follows best practices and patterns. Description of how this confirmation is done. Tip Remember you will be presenting to your customer, so act accordingly! When it is your turn to observe, ask questions and make comments as if you were the customer.\nRemember to consider the following presentation requirements:\nDianna and Harish would like a presentation that demonstrates the value of Azure’s zero-trust networking capabilities, showcases Azure’s high availability features, and provides examples of how this design can scale. Angela has requested an overview diagram of the entire architecture. She wants to know how it will meet the company’s sustainability objectives, while ensuring resilience and business continuity.\n",
+    "description": "",
+    "tags": null,
+    "title": "Prepare presentation",
+    "uri": "/sustainability/present-your-solution/prepare-presentation/"
+  },
+  {
+    "content": "Groups take turns presenting. The group not presenting: Role-plays as the customer. Asks questions. Provides feedback. Use the worksheet to take notes about your team’s strengths and areas of improvement. Teams share their presentation.\n",
+    "description": "",
+    "tags": null,
+    "title": "Closeout",
+    "uri": "/sustainability/present-your-solution/closeout/"
+  },
+  {
+    "content": "What is a sustainable workload? The word “workload” refers to a group of application resources that help achieve a shared business objective or carry out a shared business process. Various services, such as APIs and data storage, collaborate to provide a certain end-to-end capability.\nWe discuss the environmental impact of our tasks when we talk about sustainability.\nTherefore, a sustainable workload refers to the process of developing solutions that increase usage while decreasing waste, thereby lowering the environmental impact.\nThis section aims to provides a prescriptive guidance for building sustainable workloads on Azure. Review the provided guidance that applies Well-Architected best practices as a technical foundation for building and operating sustainable solutions on Azure.\n",
+    "description": "",
+    "tags": null,
+    "title": "Concepts",
+    "uri": "/sustainability/concepts/"
+  },
+  {
+    "content": "The lead architect from your customer’s organisation provides a diagram of the current state of their environment.\n",
+    "description": "",
+    "tags": null,
+    "title": "Customer environment",
+    "uri": "/sustainability/customer-scenario/customer-environment/"
+  },
+  {
+    "content": "Use the discussion questions to guide your architecture and build a diagram illustrating how the customer’s existing structure can be made sustainable using sustainable best practices.\nRequirements: Include all the elements from Step 1 to build your solution. Include candidate roadmap components and explain which will be introduced to the current architectural landscape. Resolve the changes across the architecture landscape: what will be removed, retired and/or maintained. Tip You can use PowerPoint or any other tool: Visio, Draw.io, LucidChart or Cacoo.\nDiscussion questions What tools are available to help measure the emissions of existing on-premises environments? How can emissions be measured in Azure? As solution designers and engineers, what do you have control over when it comes to sustainability in Azure and how does that contrast to that which Microsoft can control? What tradeoffs are required to support sustainability goals while meeting business requirements? How should you pick a suitable region to deploy to? Consider network access patterns. What VM SKUs are available to support your workload and do these translate to energy efficiency improvements? Are more appropriate services that match your workloads profile available? What scaling patterns should you implement? What tools are available to identify underutilized, redundant and non-critical capacity? How can you manage updates and patching across all of your Azure services? What are the benefits of doing so from a sustainability angle? What changes can you make to optimize your applications to minimize resource usage, beyond their overall architecture? ",
+    "description": "",
+    "tags": null,
+    "title": "Design",
+    "uri": "/sustainability/optimize-your-workload/design/"
+  },
+  {
+    "content": "The following critical design principles for sustainability resonate with the Green Software Principles from the Green Software Foundation and extend the quality pillars of the Azure Well-Architected Framework. This set of competencies is needed to design, build, and run green software on Azure.\nCarbon efficiency Emit the least amount of carbon possible\nCarbon emissions will always occur due to our activities, but we can minimize the amount emitted per unit of work by ensuring that every gram of carbon we emit into the atmosphere brings maximum benefit. Green software must be carbon efficient; it must emit the least amount of carbon possible.\nEnergy efficiency Use the least amount of energy possible\nGreen software practitioners are responsible for the energy their products use and strive to make them as energy efficient as possible. But rather than just building the “greenest” software or the most energy-efficient code, our aim is to consider the end user and figure out how to prevent them from emitting needless emissions.\nCarbon awareness Do more when the electricity is cleaner and do less when the electricity is dirtier\nThe application must be made aware of how much carbon it is emitting. We can utilize different approaches such as demand shifting to move workloads to data centers or periods where this a high energy supply and a low demand that can satisfied by renewable energy and demand shaping to adjust an application’s behavior and appearance in real-time to match the energy supply.\nHardware efficiency Use the least amount of embodied carbon possible\nThe carbon that was released to build a device is known as embodied carbon. You must consider the carbon released when running the computer as well as the carbon incorporated in its production and disposal when determining your overall carbon footprint.\nA sustainable application will therefore ensure that older devices are supported and will increase each device’s efficiency. Because demand shifting and demand shaping may be used, cloud computing is more energy efficient than an on-premises server.\nMeasuring sustainability What you can’t measure, you can’t improve\nCloud applications involve a complex ecosystem, making it difficult to measure their carbon emissions. The whole ecosystem is involved, from the cloud infrastructure (with emissions dashboards to help us), to the network paths that are crossed, to edge technology and user devices.\nThe Software Carbon Intensity is a method of scoring any software application, not limited to just cloud or not just end-user applications, but all types of applications in between. It provides a common language to describe how software behaves with respect to carbon emissions and how a proposed change might eliminate some of them.\nClimate commitments Understand the exact mechanism of reduction\nEvery organization or entity has several options for reducing its carbon footprint. We should, however, stay focused on preventing carbon emissions from the start, a goal that the Green Software Foundation supports. This is what we call Abatement, or Carbon Elimination.\nA company’s strategy can combine all possible methodologies and, depending on the result, can reach a Net Zero target by eliminating carbon emissions where possible, and compensating for residual emissions.\nThe Software Carbon Intensity equation aims to eliminate emissions, which should always be the primary goal of a sustainable workload, and the score can only be reduced with abatement.\n",
+    "description": "",
+    "tags": null,
+    "title": "Design principles",
+    "uri": "/sustainability/concepts/design-principles/"
+  },
+  {
+    "content": "At Azure, we consider sustainability and humanity’s reaction to climate change to be among the most significant concerns of our time.\nWe think it’s still possible to make plans for a better, cleaner future. To ensure that we are adjusting and expanding alongside the world with the least amount of negative environmental impact, we have committed to putting sustainable technology at the center of our innovation.\nInfo The Carbon Benefits of Cloud Computing\nA 2018 study found that using the Microsoft Azure cloud platform can be up to 93 percent more energy efficient and up to 98 percent more carbon efficient than on-premises solutions.\nRead the study on sustainability and cloud computing.\nEvolving beyond an operational approach The environmental mission is frequently considered as a cost center in the business, as a risk to be handled, or as a compliance requirement when sustainability is viewed from an operational perspective. However, for Azure, datacenters and environmentally friendly cloud infrastructure offer a fantastic chance to give back to the communities in which we operate.\nAzure has committed to focus on four key areas of environmental impact to local communities—carbon, water, waste, and ecosystems: 100% renewable energy by 2025, water positive by 2030, zero-waste certification by 2030, and net-zero deforestation from new construction.\nInfo Hardware innovation for the cloud\nWith Open Compute Project and other groundbreaking collaborations, Microsoft is bringing hardware design and development into the open, making way for unprecedented innovation that benefits everyone.\nExplore our energy innovations for the next generation of sustainable cloud technology\nLearn more White paper: The Carbon Benefits of Cloud Computing\nTools and resources: Microsoft sustainability\nMicrosoft datacenter sustainability fact sheets\nMicrosoft circular centers\nMicrosoft 2021 Environmental Sustainability Report\nCross-sector initiative: Transform to Net Zero\nResponsible cloud infrastructure packaging\n",
+    "description": "",
+    "tags": null,
+    "title": "Our commitments",
+    "uri": "/sustainability/overview/our-commitments/"
+  },
+  {
+    "content": "At the end of this step, teams should have a proposed solution diagram that illustrates how the customer’s existing structure can be made sustainable in Azure using sustainable best practices and:\n✔️ Includes all the elements from Step 1.\n✔️ Includes candidate roadmap components and explains which will be introduced to the current architectural landscape.\n✔️ Resolves the changes across the architecture landscape: what will be removed, retired and/or maintained.\n",
+    "description": "",
+    "tags": null,
+    "title": "Checklist",
+    "uri": "/sustainability/optimize-your-workload/checklist/"
+  },
+  {
+    "content": "Your customer provides a list of their needs. The team has a solution-focused discussion about this new information.\nDiscuss solutions for the customer needs using your notes and considering the following questions:\nAre there any additional needs that aren’t explicitly provided by the customer? What can we infer? How could we address these needs? Build a slide with solutions to customer needs for the final presentation (Step 4).\nPersonas Dianna, Chief Information Officer (CIO) Minimize costs where possible, particularly when service demand is low. Support high reliability and availability such that there is minimal downtime for production environment. Ensure that customers across geographies get the best experience when streaming video with minimal latency. Harish, Chief Information Security Officer (CISO) Provide mechanism for different teams to manage services they are responsible for without providing more access than is necessary. Must include a way to easily review access permissions on a periodic basis. Review security posture of entire environment through a single tool. Ensure critical patches and updates for all services are applied automatically without manual effort. Angela, Chief Sustainability Officer (CSO) Provide the business with easily consumable emissions metrics that will contribute to their end of year scope 3 carbon accounting report. Track progress over time. Ensure that service design minimizes environmental impact as much as possible while balancing other business needs. Kate, Chief Data Officer (CDO) Ensure the data residency and regulatory requirements of each region are met. Review the data lifecycle, access, and retention policy. ",
+    "description": "",
+    "tags": null,
+    "title": "Customer needs",
+    "uri": "/sustainability/customer-scenario/customer-needs/"
+  },
+  {
+    "content": "Teams will become familiar with the customer’s current state, needs, objections and start developing a PowerPoint presentation.\n",
+    "description": "",
+    "tags": null,
+    "title": "Customer scenario",
+    "uri": "/sustainability/customer-scenario/"
+  },
+  {
+    "content": "The following critical design areas for sustainability resonate with the Green Software Principles from the Green Software Foundation and extend the quality pillars of the Azure Well-Architected Framework. This set of competencies is needed to design, build, and run green software on Azure.\nApplication design When building new or updating existing applications, it’s crucial to consider how the solution will impact the climate and if there are ways to improve and optimize.\nLearn how to optimize your code and applications for a more sustainable application design.\nApplication platform Designing and building sustainable workloads requires understanding the platform where you’re deploying the applications.\nKnow more about how to make better informed platform-related decisions around sustainability.\nTesting Organizations developing and deploying solutions to the cloud also need reliable testing.\nLearn about how to run workload tests and how to optimize for a more sustainable testing model.\nOperational procedures The discipline of green software and its implementation within cloud efficiency patterns is relatively recent, and no specific and universal standards have been agreed upon yet.\nThe Green Software Foundation works on creating and standardizing ways of making green software. However, it’s vital that everyone considers this aspect in their daily work and that when designing, planning, and deploying Azure workloads, we consider the best practices that are already available and prepare our environment to incorporate new standards when ready.\nLearn more about how to measure and improve your Azure workloads’ cost and carbon efficiency.\nNetworking and connectivity Most workloads in the cloud rely heavily on networking to operate. Whether internal networking or public-facing workloads, the components and services used in provisioned solutions must consider the impact of carbon emissions. Consider that network equipment consumes electricity, including traffic between the data centers and end consumers.\nLearn about how to enhance and optimize network efficiency to reduce unnecessary carbon emissions.\nNote Internet traversal between data centers and end consumers is a significant Scope 3 emission. Therefore, recommendations in this section are aligned with the Principles of Green Software Networking area to improve networking efficiency.\nStorage Data storage in Azure is a crucial component of most provisioned workloads.\nLearn how to design for a more sustainable data storage architecture and optimize existing deployments.\nSecurity Designing sustainable workloads on Azure must encompass security, which is a foundational principle through all phases of a project.\nLearn about considerations and recommendations leading to a more sustainable security posture.\n",
+    "description": "",
+    "tags": null,
+    "title": "Design areas",
+    "uri": "/sustainability/concepts/design-areas/"
+  },
+  {
+    "content": "Software that emits the least amount of carbon is called green software, which is an emerging discipline at the intersection of climate science, software design, electricity markets, hardware, and data center design. Only three activities reduce the carbon emissions of software: energy efficiency, hardware efficiency, and carbon awareness.\nPrinciples Defining, building, and running green software applications requires a core set of competencies (cf. above) called principles. Independent of the application domain, industry, company size or kind, cloud provider or self-hosted, and programming language or framework, they come to a consensus on what it takes to be a green software practitioner.\nUsing these principles as part of your implementation will serve as a useful guide for a meaningful impact on the carbon pollution of your applications.\nPatterns A green software pattern is a specific example of how to put one or more concepts into practice in a practical setting. Patterns are the helpful suggestions software practitioners can employ in their software applications today, while principles represent the theory that supports green software. Patterns are independent of vendor.\nPractices A green software practice is a pattern that is applied to a product from a particular vendor and instructs users on how to utilize that product more sustainably.\n",
+    "description": "",
+    "tags": null,
+    "title": "What is green software?",
+    "uri": "/sustainability/overview/what-is-green-software/"
+  },
+  {
+    "content": "You’ve been provided a consolidated list of customer’s objections that were collected throughout the discovery process.\nDiscuss each customer objection and determine possible responses. Build a slide with responses to customer objections for the final presentation (Step 4). Objections How can we analyze whether this project will reduce our carbon emissions? Any reason for us to consider PaaS over moving the application as-is to IaaS? Have we considered alternative architectures for the application? Why have you chosen the proposed architecture? How can the operations team efficiently manage and monitor the new platform? What tools and training are needed? If the primary region fails, how can we ensure business continuity while keeping sustainability in mind? How can we keep track of the impact of future development into our carbon emissions footprint? We would like to ensure lowest latency for the end users of the service. How could you monitor the emissions generated by this solution and set goals to track your progress towards carbon reduction targets? ",
+    "description": "",
+    "tags": null,
+    "title": "Customer objections",
+    "uri": "/sustainability/customer-scenario/customer-objections/"
+  },
+  {
+    "content": "Lorem Ipsum.\n",
+    "description": "",
+    "tags": null,
+    "title": "Optimize your workload",
+    "uri": "/sustainability/optimize-your-workload/"
+  },
+  {
+    "content": "At the end of this step, teams should have the following slides prepared:\n✔️ Customer case study key points.\n✔️ Main characteristics of current customer environment.\n✔️ Solutions for customer needs.\n✔️ Responses to customer objections.\n",
+    "description": "",
+    "tags": null,
+    "title": "Customer checklist",
+    "uri": "/sustainability/customer-scenario/customer-checklist/"
+  },
+  {
+    "content": "Lorem Ipsum.\n",
+    "description": "",
+    "tags": null,
+    "title": "Present your solution",
+    "uri": "/sustainability/present-your-solution/"
+  },
+  {
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "Build green software applications on Azure",
+    "uri": "/sustainability/"
+  },
+  {
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "Categories",
+    "uri": "/sustainability/categories/"
+  },
+  {
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "Tags",
+    "uri": "/sustainability/tags/"
+  }
+]
