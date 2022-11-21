@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: timeshift-cronjobs-operator
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      application: kopfexample-operator
+  template:
+    metadata:
+      labels:
+        application: kopfexample-operator
+    spec:
+      serviceAccountName: kopfexample-account
+      containers:
+      - name: the-only-one
+        image: mycontainergreenayayazzz.azurecr.io/carbon-aware-actions/timeshift-cronjobs:v1
