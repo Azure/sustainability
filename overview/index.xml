@@ -13,7 +13,7 @@
       <link>http://azure.github.io/sustainability/overview/about-this-workshop/</link>
       <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
       <guid>http://azure.github.io/sustainability/overview/about-this-workshop/</guid>
-      <description>What What to expect This is a technical application workshop with a focus on experiential group learning and collaboration with your peers to solve a customer business problem. You will be strategizing solution considerations to design a robust recommended solution architecture to meet business requirements.
+      <description>This is a technical application workshop with a focus on experiential group learning and collaboration with your peers to solve a customer business problem. You will be strategizing solution considerations to design a robust recommended solution architecture to meet business requirements.
 You will work in small groups on a real-life customer scenario that simulates the format of an Architecture Design Session (ADS) to learn how to design and build green software applications.
 You will apply your skills and knowledge of architectural best practices and design patterns as well as concepts of Well-Architected Framework (WAF) to identify and architect expansion opportunities with Azure. Your final solution will include a reference architecture and a deployment plan on how to move the solution into production in the most effective way.</description>
     </item>
