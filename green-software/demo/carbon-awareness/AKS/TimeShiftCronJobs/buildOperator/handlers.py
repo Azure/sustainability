@@ -51,7 +51,10 @@ def findMatchingCronJobTimeScheduler(cronjobnamespace, cronjoblabels):
 def doBestTimeEstimation(cronJobtimescheduler):
 
     jobDuration = cronJobtimescheduler["spec"]["jobDuration"]
+
     location = cronJobtimescheduler["spec"]["location"]
+
+    timezone = cronJobtimescheduler["spec"]["timezone"]
 
 
     jobDeadline_hour_minute = cronJobtimescheduler["spec"]["jobDeadline"]
@@ -59,11 +62,11 @@ def doBestTimeEstimation(cronJobtimescheduler):
 
     #figure out the days corresponding to earliest start and deadline: today or tomorrow
 
-    currentTime = pd.Timestamp.now()
+    currentTime = pd.Timestamp.now(tz='UTC')
 
-    jobDeadline = pd.Timestamp(jobDeadline_hour_minute)
+    jobDeadline = pd.Timestamp(jobDeadline_hour_minute, tz=timezone).tz_convert('UTC')
 
-    jobEarliestStart = pd.Timestamp(jobEarliestStart_hour_minute)
+    jobEarliestStart = pd.Timestamp(jobEarliestStart_hour_minute, tz=timezone).tz_convert('UTC')
     
     #if deadline is 09:00; and current time is 20:00 => job deadline is in the following day
 
@@ -79,6 +82,10 @@ def doBestTimeEstimation(cronJobtimescheduler):
 
     # find Best time to schedule job, based on the constraints expressed in the jobTimeScheduler CRD
     bestStartTime = findBestContinuousTimeSlot(jobEarliestStart_string, jobDeadline_string, jobDuration, location)
+
+    if bestStartTime is None :
+        print("API call findBestContinuousTimeSlot returned None => using EarliestStart to schedule Job") 
+        return jobEarliestStart_hour_minute 
 
 
     return bestStartTime
@@ -98,17 +105,11 @@ def AnnotateCronJobAndScheduleNextJob(body, spec, name, namespace, status, annot
     # find Best time to schedule job, based on the constraints expressed in the jobTimeScheduler CRD
     bestStartTimeString = doBestTimeEstimation(cronJobtimescheduler)
 
+    #the API returns besttime in UTC
     bestStartTime = pd.Timestamp(bestStartTimeString, tz='UTC')
 
     #Create corresponding CronJobExpression, by updating only hour and minute in expression
-    initialcronscheduleFields = spec["schedule"].split(" ")
-   
-    # set hour and minute in cron schedule expression, from best time found
-    initialcronscheduleFields[0] = str(bestStartTime.minute)
-    initialcronscheduleFields[1] = str(bestStartTime.hour)
-
-    #new cron expression
-    newcronexpression = " ".join(initialcronscheduleFields)
+    newcronexpression = "%s %s * * * " % (bestStartTime.minute, bestStartTime.hour)
 
 
     # Schedule Time:Hour for Job + add annotation for bestStartTime
@@ -120,7 +121,7 @@ def AnnotateCronJobAndScheduleNextJob(body, spec, name, namespace, status, annot
                     }
     api = kubernetes.client.BatchV1Api()
     obj = api.patch_namespaced_cron_job(name, namespace, cronjob_patch)
-    print("Scheduled next occurence of newly created CronJob %s at bestTime found : %s" % (name,bestStartTime))
+    print("Scheduled next occurence of newly created CronJob %s at bestTime found (tz=UTC) : %s" % (name,bestStartTime))
 
 ##############################
 
@@ -137,12 +138,13 @@ def TimeSchedulebNextJobOccurence(body, spec, name, namespace, status, labels, a
         print("First execution of Cronjob/Job %s did not happen yet. Planned at :  %s" % (name,scheduledTimeString)) 
         return    #first run did not happen yet 
 
-    lastExecutedJobTimeString = status["lastScheduleTime"]
-    lastExecutedJobTime = pd.Timestamp(lastExecutedJobTimeString)
+
+    lastExecutedJobTimeStatus = status["lastScheduleTime"]
+    lastExecutedJobTime = pd.Timestamp(lastExecutedJobTimeStatus).tz_convert('UTC')
 
     if lastExecutedJobTime < nextScheduledJobTime: # the Planned / scheduled Job did not execute yet 
         # Next occurence of Job did not execute yet, do nothing
-        print("CronJob %s => lastExecutedJobAt: %s ; nextScheduledJobAt : %s => nothing to do" % (name,lastExecutedJobTime, nextScheduledJobTime))
+        print("CronJob %s => lastExecutedJobAt(UTC): %s ; nextScheduledJobAt(UTC) : %s => nothing to do" % (name,lastExecutedJobTime, nextScheduledJobTime))
 
     else:
         print("CronJob %s => lastExecutedJobAt: %s  => finding NextBestTime for next Job occurence." % (name,lastExecutedJobTime))
@@ -164,14 +166,7 @@ def TimeSchedulebNextJobOccurence(body, spec, name, namespace, status, labels, a
         
 
         #Create corresponding CronJobExpression, by updating only hour and minute in expression
-        initialcronscheduleFields = spec["schedule"].split(" ")
-       
-        # set hour and minute in cron schedule expression, from best time found
-        initialcronscheduleFields[0] = str(bestStartTime.minute)
-        initialcronscheduleFields[1] = str(bestStartTime.hour)
-
-        #new cron expression
-        newcronexpression = " ".join(initialcronscheduleFields)
+        newcronexpression = "%s %s * * * " % (bestStartTime.minute, bestStartTime.hour)
 
 
         # Schedule Time:Hour for Job + add annotation for bestStartTime
@@ -183,6 +178,6 @@ def TimeSchedulebNextJobOccurence(body, spec, name, namespace, status, labels, a
                         }
         api = kubernetes.client.BatchV1Api()
         obj = api.patch_namespaced_cron_job(name, namespace, cronjob_patch)
-        print("Scheduled next occurence of CronJob %s at bestTime Found at %s" % (name,bestStartTime))
+        print("Scheduled next occurence of CronJob %s at bestTime Found (tz=UTC) %s" % (name,bestStartTime))
 
 ##############################
