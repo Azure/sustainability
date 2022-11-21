@@ -13,8 +13,9 @@
       <link>http://azure.github.io/sustainability/overview/about-this-workshop/</link>
       <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
       <guid>http://azure.github.io/sustainability/overview/about-this-workshop/</guid>
-      <description>Who should take this training? You will learn how to define, create, and use green software applications in this training. Regardless of the application area, industry, organization size, or programming language, it lays out the standards to assist build a shared understanding of what it means to be a green software practitioner.
-These recommendations should be studied by anybody involved in building, deploying, or managing software to make choices that significantly reduce the amount of carbon produced by their applications.</description>
+      <description>What What to expect This is a technical application workshop with a focus on experiential group learning and collaboration with your peers to solve a customer business problem. You will be strategizing solution considerations to design a robust recommended solution architecture to meet business requirements.
+You will work in small groups on a real-life customer scenario that simulates the format of an Architecture Design Session (ADS) to learn how to design and build green software applications.
+You will apply your skills and knowledge of architectural best practices and design patterns as well as concepts of Well-Architected Framework (WAF) to identify and architect expansion opportunities with Azure. Your final solution will include a reference architecture and a deployment plan on how to move the solution into production in the most effective way.</description>
     </item>
     <item>
       <title>About our commitments</title>
@@ -26,12 +27,11 @@ We think it&amp;rsquo;s still possible to make plans for a better, cleaner futur
 Info The Carbon Benefits of Cloud Computing</description>
     </item>
     <item>
-      <title>About green software?</title>
+      <title>About green software</title>
       <link>http://azure.github.io/sustainability/overview/about-green-software/</link>
       <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
       <guid>http://azure.github.io/sustainability/overview/about-green-software/</guid>
-      <description>Software that emits the least amount of carbon is called green software, which is an emerging discipline at the intersection of climate science, software design, electricity markets, hardware, and data center design. Only three activities reduce the carbon emissions of software: energy efficiency, hardware efficiency, and carbon awareness.
-Principles Defining, building, and running green software applications requires a core set of competencies (cf. above) called principles. Independent of the application domain, industry, company size or kind, cloud provider or self-hosted, and programming language or framework, they come to a consensus on what it takes to be a green software practitioner.</description>
+      <description>Software that emits the least amount of carbon is called green software, which is an emerging discipline at the intersection of climate science, software design, electricity markets, hardware, and data center design. Only three activities reduce the carbon emissions of software: energy efficiency, hardware efficiency, and carbon awareness.</description>
     </item>
   </channel>
 </rss>
