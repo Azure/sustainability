@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Optimize your workload on Build green software applications on Azure</title>
-    <link>http://azure.github.io/sustainability/optimize-your-workload/</link>
+    <title>Optimize on Build green software applications on Azure</title>
+    <link>http://azure.github.io/sustainability/optimize/</link>
     <description>Recent content in Optimize your workload on Build green software applications on Azure</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -18,17 +18,17 @@ Requirements: Include all the elements from Step 1 to build your solution. Inclu
     </item>
     <item>
       <title>Design</title>
-      <link>http://azure.github.io/sustainability/optimize-your-workload/design/</link>
+      <link>http://azure.github.io/sustainability/optimize/design/</link>
       <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
-      <guid>http://azure.github.io/sustainability/optimize-your-workload/design/</guid>
+      <guid>http://azure.github.io/sustainability/optimize/design/</guid>
       <description>Use the discussion questions to guide your architecture and build a diagram illustrating how the customer’s existing structure can be made sustainable using sustainable best practices.
 Requirements: Include all the elements from Step 1 to build your solution. Include candidate roadmap components and explain which will be introduced to the current architectural landscape. Resolve the changes across the architecture landscape: what will be removed, retired and/or maintained. Tip You can use PowerPoint or any other tool: Visio, Draw.</description>
     </item>
     <item>
       <title>Checklist</title>
-      <link>http://azure.github.io/sustainability/optimize-your-workload/checklist/</link>
+      <link>http://azure.github.io/sustainability/optimize/checklist/</link>
       <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
-      <guid>http://azure.github.io/sustainability/optimize-your-workload/checklist/</guid>
+      <guid>http://azure.github.io/sustainability/optimize/checklist/</guid>
       <description>At the end of this step, teams should have a proposed solution diagram that illustrates how the customer’s existing structure can be made sustainable in Azure using sustainable best practices and:
 ✔️ Includes all the elements from Step 1.
 ✔️ Includes candidate roadmap components and explains which will be introduced to the current architectural landscape.
