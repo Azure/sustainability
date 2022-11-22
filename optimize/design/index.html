@@ -145,11 +145,16 @@ For instance, below are some, non exhaustive, examples of API providers:
 </ul>
           
 <p><b>Carbon Intensity Data</b></p>
- 
 <ul>            
-<li><a href="https://api.carbonintensity.org.uk/">UK Carbon Intensiry API</a></li>
-<li><a href="https://data.rte-france.com/catalog/-/api/consumption/Ecowatt/v4.0/">France Carbon Intensiry API</a></li>
-<i>others..</i>
+<li>Carbon Intensity Data providers offer APIs for <b>historical emissions</b>, <b>current emissions (now)</b>, and <b>forecast emissions</b> (next day or few days, depending on the provider)</li>
+<li>The Carbon Intensity Data is quantified through predictive models, and the quantified emissions data gets updated regularly (each few minutes to an hour, depending on the provider)</li>
+</ul> 
+
+<p><b>Using Carbon Intensity Data for Carbon Awareness</b></p>
+<ul>            
+<li><b>Using current emissions</b> for Carbon Intensity in a given region, applications can <b>implement demand shaping</b>, by adapting to current emissions and reducing usage / demand when carbon intensity is high.</li>
+<li><b>Using forecast emissions</b> for Carbon Intensity in a given region, applications can <b>implement time shifting</b>, by time scheduling batch workloads when carbon intensity is low.</li> 
+<li><b>Using the average historical emissions</b> for Carbon Intensity in multiple regions, platforms can <b>implement region shifting</b>, by deploying workloads to the region with low average carbon intensity.</li>
 </ul> 
         
 <h4 id="carbon-awareness-enablers">Carbon Awareness Enablers</h4>
