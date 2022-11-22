@@ -9,11 +9,12 @@ import json
 import pandas as pd
 
 
+CARBON_INTENSITY_API_URL = os.getenv("CARBON_INTENSITY_API_URL", default="https://og-serverless.azure-api.net/electricitymaphack/findBestContinuousTimeSlot")
+
 # utility func
 def findBestContinuousTimeSlot(jobEarliestStart, jobDeadline, jobDuration, location):
     
-    api_request = 'https://electricitymaphack.azurewebsites.net/api/findBestContinuousTimeSlot?jobEarliestStart=%s&jobDeadline=%s&jobDuration=%s&zone=%s' % (jobEarliestStart, jobDeadline, jobDuration, location)
-    
+    api_request = '%s?jobEarliestStart=%s&jobDeadline=%s&jobDuration=%s&zone=%s' % (CARBON_INTENSITY_API_URL, jobEarliestStart, jobDeadline, jobDuration, location)
     response = requests.get(api_request)
 
     json_data = response.json() if response and response.status_code == 200 else None
