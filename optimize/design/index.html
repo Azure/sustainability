@@ -173,19 +173,57 @@ To help you build carbon aware applications and platforms, you can use the follo
 <ul>
 <li>A demo API for calculating the best time to schedule a Job, given the job duration and deadline constraints.</li>
 <li>This demo API is built on  ElectricityMap as a first pilote, and we're looking to integrate with the Carbon Aware SDK.</li>
-<li>Check Time Shifting API enabler <a href="https://github.com/Azure/sustainability/tree/main/green-software/demo/carbon-awareness/CarbonIntensityData/ElectricityMap/carbonIntensityAPIs">the Github folder.</a></li>  
+<li>Check Time Shifting API enabler <a href="https://github.com/Azure/sustainability/tree/main/green-software/demo/carbon-awareness/CarbonIntensityData/ElectricityMap/carbonIntensityAPIs"> in the Github folder.</a></li>  
 </ul>
 
           
 <h4 id="demand-shaping">Demand Shaping</h4>
- 
- 
- <h4 id="time-shifting">Time Shifting</h4>
-
-        
- <h4 id="region-shifting">Region Shifting</h4>
+<p>Demand shaping is about shaping computation to match the existing supply.</p>
+<p>If carbon intensity is low, increase the demand; do more in your applications.</p>
+<p>If carbon intensity is high, decrease demand; do less in your applications.</p>
           
+<p><b>Azure Kubernetes Service</b></p>        
+ <ul>
+<li>Suspend Jobs when carbon Intensity is higher than a given threshold ; Resume Jobs when it is lower</li>
+</u>   
+ 
+<p><b>Azure Durable Functions</b></p>         
+ <ul>
+<li>Suspend orchestration workflow when carbon Intensity is higher than a given threshold ; Resume orchestration when it is lower</li>
+</u>   
+       
+          
+          
+          
+ <h4 id="time-shifting">Time Shifting</h4>
+ Using electricity when the carbon intensity is low is the best way to ensure investment flows towards low-carbon emitting plants and away from high-carbon emitting plants.
+
+<p><b>Windows</b></p>
+<ul>
+<li>Microsoft Carbon Aware Windows - <a href="https://www.techradar.com/news/windows-11-is-getting-an-eco-friendly-update-but-could-microsoft-do-more" >Microsoft announced a project to make Windows 11 more sustainable.</a> Initially, this means running Windows updates when the carbon intensity is lower.
+</li>
+</u>   
+ 
+  <p><b>Azure Kubernetes Service</b></p>         
+ <ul>
+<li>Time Schedule OnDemand (or ad-hoc) Jobs, when carbon Intensity is lower, given job duration and deadline.</li>
+<li>Time Schedule CronJobs (Recurrent Jobs), when carbon Intensity is lower, given job duration and deadline.</li>
+</u>   
+ 
+ <p><b>Azure Logic Apps </b></p>         
+ <ul>
+<li>Time Schedule CronJobs (Recurrent worflows), when carbon Intensity is lower, given job duration and deadline.</li>
+</u>   
       
+          
+          
+ <h4 id="region-shifting">Region Shifting</h4>
+  Spatial or Region shifting means moving your computation to another physical location where the current carbon intensity is lower. It might be a region that naturally has lower carbon sources of energy.        
+
+ <p><b>Azure Fleet Manager </b></p>         
+ <ul>
+<li>Deploy kubernetes workloads, to the AKS cluster hosted in low emissions Regions..</li>
+</u>   
  
  <h4 id="explore-community-carbon-aware-projects">Explore Community Carbon Aware Projects</h4>
              
