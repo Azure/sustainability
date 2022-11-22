@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Customer scenario on Build green software applications on Azure</title>
+    <link>http://azure.github.io/sustainability/customer-scenario/</link>
+    <description>Recent content in Customer scenario on Build green software applications on Azure</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Microsoft Open Source Community</copyright>
+    <lastBuildDate>Wed, 16 Nov 2022 15:04:29 +0100</lastBuildDate><atom:link href="http://azure.github.io/sustainability/customer-scenario/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Case study</title>
+      <link>http://azure.github.io/sustainability/scenario/case-study/</link>
+      <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
+      <guid>http://azure.github.io/sustainability/scenario/case-study/</guid>
+      <description>Contoso is a highly respected business leadership academy based in London, United Kingdom with more than 150,000 members in the region and another 2,500,000 worldwide. They deliver in-person training, online seminars and Massive Open Online Courses (MOOCs).
+Among their various cohorts there is alignment between their curriculum and the UN Sustainable Development Goals (SDGs) as well as with the UK’s Net Zero Strategy which sets our policies and proposals for decarbonizing all sectors of the UK economy to meet their net zero target by 2050.</description>
+    </item>
+    <item>
+      <title>Current environment</title>
+      <link>http://azure.github.io/sustainability/scenario/current-environment/</link>
+      <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
+      <guid>http://azure.github.io/sustainability/scenario/current-environment/</guid>
+      <description>The lead architect from your customer’s organisation provides a diagram of the current state of their environment.</description>
+    </item>
+    <item>
+      <title>Checklist</title>
+      <link>http://azure.github.io/sustainability/scenario/checklist/</link>
+      <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
+      <guid>http://azure.github.io/sustainability/scenario/checklist/</guid>
+      <description>At the end of this step, teams should have the following slides prepared:
+✔️ Customer case study key points.
+✔️ Main characteristics of current customer environment.
+✔️ Solutions for customer needs.
+✔️ Responses to customer objections.</description>
+    </item>
+  </channel>
+</rss>
