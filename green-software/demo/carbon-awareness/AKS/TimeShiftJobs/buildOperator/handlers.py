@@ -62,14 +62,15 @@ def SuspendAndScheduleJob(body, spec, name, namespace, status, annotations, labe
     
     jobDuration = jobtimescheduler["spec"]["jobDuration"]
     location = jobtimescheduler["spec"]["location"]
+    timezone = jobtimescheduler["spec"]["timezone"]
 
     jobDeadline_hour_minute = jobtimescheduler["spec"]["jobDeadline"]
     #figure out the day corresponding to the deadline: today or tomorrow
 
-    currentTime = pd.Timestamp.now()
+    currentTime = pd.Timestamp.now(tz='UTC')
     currentTime_string = currentTime.strftime('%Y-%m-%d %X')
 
-    jobDeadline = pd.Timestamp(jobDeadline_hour_minute)
+    jobDeadline = pd.Timestamp(jobDeadline_hour_minute, tz=timezone).tz_convert('UTC')
     
     
     if currentTime >= jobDeadline : jobDeadline = jobDeadline + pd.Timedelta(days=1)  #if deadline is 09:00; and current time is 20:00 => job deadline is in the following day
@@ -87,7 +88,7 @@ def SuspendAndScheduleJob(body, spec, name, namespace, status, annotations, labe
                 }
     api = kubernetes.client.BatchV1Api()
     obj = api.patch_namespaced_job(name, namespace, job_patch)
-    print("Suspending newly created Job %s to be scheduled at bestTime with lowest Carbon Intensity at %s" % (name,bestStartTime))
+    print("Suspending newly created Job %s to be scheduled at bestTime with lowest Carbon Intensity at(UTC) %s" % (name,bestStartTime))
 
 ##############################
 
@@ -97,14 +98,14 @@ def SuspendAndScheduleJob(body, spec, name, namespace, status, annotations, labe
 def interruptJobs(body, spec, name, namespace, status, annotations, **kwargs):
 
     scheduledTimeString = annotations["bestStartTime"]
-    scheduledTime = pd.Timestamp(scheduledTimeString)
+    scheduledTime = pd.Timestamp(scheduledTimeString, tz='UTC')
 
-    currentTime = pd.Timestamp.now()
+    currentTime = pd.Timestamp.now(tz='UTC')
 
     if currentTime > scheduledTime :
         print("Current time is %s .Reached Scheduling Time for Job %s, planned to run at %s => Running Job Now" % (currentTime, name, scheduledTime))
 
-        job_patch = {'spec': {'suspend': True},
+        job_patch = {'spec': {'suspend': False},
                 'metadata' : {'annotations' : {
                     'bestStartTime' : None
                     } }
@@ -113,7 +114,7 @@ def interruptJobs(body, spec, name, namespace, status, annotations, **kwargs):
         obj = api.patch_namespaced_job(name, namespace, job_patch)
 
     else:
-        print("Current time is %s .Still has not reached Scheduling Time for Job %s, planned to run at %s => Nothing to do." % (currentTime, name, scheduledTime))
+        print("Current time is %s .Still has not reached Scheduling Time for Job %s, planned to run at(UTC) %s => Nothing to do." % (currentTime, name, scheduledTime))
     
 
 ##############################

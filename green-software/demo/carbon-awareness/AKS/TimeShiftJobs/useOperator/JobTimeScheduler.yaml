@@ -10,6 +10,7 @@ spec:
       titi : toto    
       tutu : tete    
 
-  jobDuration: 7 # expressed in Hours
-  jobDeadline: "09:00" # expressed in Hours ; deadline means job has finished by this time
-  location: FR # in ElectricityMap jargon : location = zone = country
+  jobDuration: 2                      # expressed in Hours
+  jobDeadline: "09:00"                # expressed in Hours ; deadline means job has finished by this time
+  location: FR                        # in ElectricityMap jargon : location = zone = country
+  timezone: CET                       # for France / Paris

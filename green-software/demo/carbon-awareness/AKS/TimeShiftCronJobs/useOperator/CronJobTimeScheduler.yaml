@@ -9,8 +9,8 @@ spec:
     labels: 
       titi : toto    
       tutu2 : tete    
-  jobDuration: 1 # expressed in Hours
-  jobEarliestStart: "18:00" # expressed in Hours:minutes (24h) ; 
-  jobDeadline: "07:00" # deadline means job has finished by this time
-  timezone: CET # for France / Paris
-  location: FR # in ElectricityMap jargon : location = zone = country
+  jobDuration: 1                      # expressed in Hours ; min is 1h
+  jobEarliestStart: "18:00"           # expressed in Hours:minutes (24h) ; 
+  jobDeadline: "07:00"                # deadline means job has finished by this time
+  timezone: CET                       # for France / Paris
+  location: FR                        # in ElectricityMap jargon : location = zone = country
