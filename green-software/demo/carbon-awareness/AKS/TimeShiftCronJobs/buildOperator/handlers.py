@@ -50,7 +50,7 @@ def findMatchingCronJobTimeScheduler(cronjobnamespace, cronjoblabels):
 
 ###############################
 
-def doBestTimeEstimation(cronJobtimescheduler):
+def doBestTimeEstimation(cronJobtimescheduler, is_first_run=False):
 
     jobDuration = cronJobtimescheduler["spec"]["jobDuration"]
 
@@ -73,7 +73,11 @@ def doBestTimeEstimation(cronJobtimescheduler):
     #if deadline is 09:00; and current time is 20:00 => job deadline is in the following day
 
 
-    if currentTime >= jobEarliestStart : jobEarliestStart = jobEarliestStart + pd.Timedelta(days=1)  
+    if is_first_run:
+        if currentTime >= jobEarliestStart and currentTime < jobDeadline: jobEarliestStart = currentTime  
+    else:
+        if currentTime >= jobEarliestStart : jobEarliestStart = jobEarliestStart + pd.Timedelta(days=1)  
+
     jobEarliestStart_string = jobEarliestStart.strftime('%Y-%m-%d %X')
 
     if currentTime >= jobDeadline : jobDeadline = jobDeadline + pd.Timedelta(days=1)  
@@ -105,7 +109,7 @@ def AnnotateCronJobAndScheduleNextJob(body, spec, name, namespace, status, annot
     
 
     # find Best time to schedule job, based on the constraints expressed in the jobTimeScheduler CRD
-    bestStartTimeString = doBestTimeEstimation(cronJobtimescheduler)
+    bestStartTimeString = doBestTimeEstimation(cronJobtimescheduler, is_first_run=True)
 
     #the API returns besttime in UTC
     bestStartTime = pd.Timestamp(bestStartTimeString, tz='UTC')
