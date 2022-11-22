@@ -117,31 +117,23 @@
             
             
 <h2 id="design-for-carbon-awareness">Design for Carbon Awareness</h2>
-<ul>
-<li>What tools are available to help measure the emissions of existing on-premises environments? How can emissions be measured in Azure?</li>
-<li>As solution designers and engineers, what do you have control over when it comes to sustainability in Azure and how does that contrast to that which Microsoft can control?</li>
-<li>What tradeoffs are required to support sustainability goals while meeting business requirements?</li>
-<li>How should you pick a suitable region to deploy to? Consider network access patterns.</li>
-<li>What VM SKUs are available to support your workload and do these translate to energy efficiency improvements?</li>
-<li>Are more appropriate services that match your workloads profile available?</li>
-<li>What scaling patterns should you implement?</li>
-<li>What tools are available to identify underutilized, redundant and non-critical capacity?</li>
-<li>How can you manage updates and patching across all of your Azure services? What are the benefits of doing so from a sustainability angle?</li>
-<li>What changes can you make to optimize your applications to minimize resource usage, beyond their overall architecture?</li>
-</ul>       
+
+<p>Carbon intensity measures how much carbon (CO2e) is emitted per kilowatt-hour (KWh) of electricity consumed. The standard unit of carbon intensity is gCO2eq/kWh, or grams of carbon per kilowatt hour.</p>
+            
+<p>Being carbon aware means responding to shifts in carbon intensity by increasing or decreasing your demand. If your work allows you to be flexible with when and where you run workloads, you can shift accordingly - consuming electricity when the carbon intensity is lower and pausing production when it is higher. For example, training a Machine Learning model at a different time or region with much lower carbon intensity.</p>      
 
 <h4 id="carbon-intensity-data-providers">Carbon Intensity Data Providers</h4>
 There are multiple providers for Electricity Carbon Intensity, that differ from coverage scope and emissions quantification models.
 For instance, below are some, non exhaustive, examples of API providers:
             
-<p>Multi-country API providers</p>
+Multi-country API providers
 <ul>
 <li><a href="https://www.watttime.org">Watttime</a></li>
 <li><a href="https://app.electricitymaps.com/map">Electricitymaps</a></li>  
 <i>others..</i>
 </ul>
 
-<p>Country specific API providers</p>
+Country specific API providers
 <ul>            
 <li><a href="https://api.carbonintensity.org.uk/">UK Carbon Intensiry API</a></li>
 <li><a href="https://data.rte-france.com/catalog/-/api/consumption/Ecowatt/v4.0/">France Carbon Intensiry API</a></li>
