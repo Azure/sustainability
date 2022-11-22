@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: kubernetes-parallel-job
+  name: interrupted-job
   labels:
     jobgroup: jobexample
 spec:
@@ -9,12 +9,12 @@ spec:
   parallelism: 2
   template:
     metadata:
-      name: kubernetes-parallel-job
+      name: interrupted-job
       labels:
         jobgroup: jobexample
     spec:
       containers:
       - name: c
         image: devopscube/kubernetes-job-demo:latest
-        args: ["5"]
+        args: ["25"]
       restartPolicy: OnFailure

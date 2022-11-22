@@ -4,7 +4,7 @@ metadata:
  name: pausejobs
 spec:
   jobRef:
-    name: kubernetes-parallel-job
+    name: interrupted-job
     #labels: 
     #- <> # this version of demo does not take into account labels ; could be implemented to Pause Jobs at the namespace level
 

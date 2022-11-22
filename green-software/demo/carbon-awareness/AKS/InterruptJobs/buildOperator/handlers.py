@@ -7,26 +7,18 @@ import time
 import requests
 import json
 
-#prom_endpoint = os.getenv("PROM_ENDPOINT", default="https://prometheus.carbon-intensity-exporter.svc.cluster.local:9090")
-
-prom_endpoint = os.getenv("PROM_ENDPOINT", default="http://20.250.74.89:9090")
-prom_query = os.getenv("PROM_QUERY", default="carbon_intensity")
-
-def getCarbonIntensityFromProm():
 
 
-    params={
-        'query': prom_query
-    }
-    response = requests.get(prom_endpoint+'/api/v1/query', params=params)
-    results = response.json()['data']['result']
-    if len(results) > 0:
-        carbon_intensity_value = results[0]['value'][1]
-        print("current carbon intensity (CO2eq/KWH) : " + carbon_intensity_value)
-        return int(carbon_intensity_value)
-    return None
+CARBON_INTENSITY_API_URL = os.getenv("CARBON_INTENSITY_API_URL", default="https://og-serverless.azure-api.net/electricitymaphack/getCarbonIntensityLatest")
 
 
+ELECTRICITYMAP_ZONE = os.getenv("ELECTRICITYMAP_ZONE", default="FR")
+
+def getCarbonIntensityFromHackathonAPI():
+    response = requests.get("%s?zone=%s" % (CARBON_INTENSITY_API_URL, ELECTRICITYMAP_ZONE))
+    json_data = response.json() if response and response.status_code == 200 else None
+    carbon_rating = json_data['carbonIntensity'] if json_data and 'carbonIntensity' in json_data else None
+    return carbon_rating 
 
 def getCarbonIntensityFromCarbonRating():
     response = requests.get('https://greenapimockyaya.azurewebsites.net/api/CarbonRating')
@@ -35,9 +27,7 @@ def getCarbonIntensityFromCarbonRating():
     return carbon_rating 
 
 def getCarbonIntensity():
-    #return getCarbonIntensityFromCarbonRating()
-    #return getCarbonIntensityFromProm()
-    return 200
+    return getCarbonIntensityFromHackathonAPI()
 ##############################
 
 
