@@ -7,13 +7,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://azure.github.io/sustainability/optimize-your-workload/assess/</loc>
+    <loc>http://azure.github.io/sustainability/optimize/assess/</loc>
     <lastmod>2022-11-16T15:04:29+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://azure.github.io/sustainability/customer-scenario/case-study/</loc>
+    <loc>http://azure.github.io/sustainability/scenario/case-study/</loc>
     <lastmod>2022-11-16T15:04:29+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -31,13 +31,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://azure.github.io/sustainability/present-your-solution/prepare-presentation/</loc>
+    <loc>http://azure.github.io/sustainability/present/prepare-presentation/</loc>
     <lastmod>2022-11-16T15:04:29+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://azure.github.io/sustainability/present-your-solution/closeout/</loc>
+    <loc>http://azure.github.io/sustainability/present/closeout/</loc>
     <lastmod>2022-11-16T15:04:29+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -49,13 +49,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://azure.github.io/sustainability/customer-scenario/customer-environment/</loc>
+    <loc>http://azure.github.io/sustainability/scenario/current-environment/</loc>
     <lastmod>2022-11-16T15:04:29+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://azure.github.io/sustainability/optimize-your-workload/design/</loc>
+    <loc>http://azure.github.io/sustainability/optimize/design/</loc>
     <lastmod>2022-11-16T15:04:29+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -73,19 +73,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://azure.github.io/sustainability/optimize-your-workload/checklist/</loc>
+    <loc>http://azure.github.io/sustainability/optimize/checklist/</loc>
     <lastmod>2022-11-16T15:04:29+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://azure.github.io/sustainability/customer-scenario/customer-needs/</loc>
-    <lastmod>2022-11-16T15:04:29+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://azure.github.io/sustainability/customer-scenario/</loc>
+    <loc>http://azure.github.io/sustainability/scenario/</loc>
     <lastmod>2022-11-16T15:04:29+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -103,25 +97,19 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://azure.github.io/sustainability/customer-scenario/customer-objections/</loc>
+    <loc>http://azure.github.io/sustainability/optimize/</loc>
     <lastmod>2022-11-16T15:04:29+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://azure.github.io/sustainability/optimize-your-workload/</loc>
+    <loc>http://azure.github.io/sustainability/scenario/checklist/</loc>
     <lastmod>2022-11-16T15:04:29+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://azure.github.io/sustainability/customer-scenario/customer-checklist/</loc>
-    <lastmod>2022-11-16T15:04:29+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://azure.github.io/sustainability/present-your-solution/</loc>
+    <loc>http://azure.github.io/sustainability/present/</loc>
     <lastmod>2022-11-16T15:04:29+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
