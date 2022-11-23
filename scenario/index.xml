@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scenario on Build green software applications on Azure</title>
+    <link>http://azure.github.io/sustainability/scenario/</link>
+    <description>Recent content in Scenario on Build green software applications on Azure</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Microsoft Open Source Community</copyright>
+    <lastBuildDate>Wed, 16 Nov 2022 15:04:29 +0100</lastBuildDate><atom:link href="http://azure.github.io/sustainability/scenario/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Case study</title>
+      <link>http://azure.github.io/sustainability/scenario/case-study/</link>
+      <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
+      <guid>http://azure.github.io/sustainability/scenario/case-study/</guid>
+      <description>Info This fictional scenario is presented to you as an option to do this simulation exercise without utilizing your application. However, the guidelines at the bottom of this page should still be taken into account.
+Contoso is a well-known and historical clothing retailer with a historically storng high-street presence. Their stores are constantly crowded, therefore joining a waiting list may be necessary to ensure entry.
+Contoso’s corporate and social responsibility (CSR) “3D strategy” defines the following key goals:</description>
+    </item>
+    <item>
+      <title>Current environment</title>
+      <link>http://azure.github.io/sustainability/scenario/current-environment/</link>
+      <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
+      <guid>http://azure.github.io/sustainability/scenario/current-environment/</guid>
+      <description>The e-commerce website is hosted on virtual machines and uses a NoSQL database as data store for product information and session state. A search engined provides search functionality over diverse product catalogs, traffic spikes, and rapidly changing inventory. More information were provided by Contoso IT staff along with the following architecture.
+Application design Contoso&amp;rsquo;s e-commerce webiste consists of a three tier application hosted in East US and West Europe with multiple virtual machines running the front end, mid-tier, database, and search engine.</description>
+    </item>
+    <item>
+      <title>Checklist</title>
+      <link>http://azure.github.io/sustainability/scenario/checklist/</link>
+      <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
+      <guid>http://azure.github.io/sustainability/scenario/checklist/</guid>
+      <description>At the end of this step, teams should have the following slides prepared:
+✔️ Customer case study key points.
+✔️ Main characteristics of current customer environment.
+✔️ Solutions for customer needs.
+✔️ Responses to customer objections.</description>
+    </item>
+  </channel>
+</rss>

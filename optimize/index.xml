@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Optimize on Build green software applications on Azure</title>
+    <link>http://azure.github.io/sustainability/optimize/</link>
+    <description>Recent content in Optimize on Build green software applications on Azure</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Microsoft Open Source Community</copyright>
+    <lastBuildDate>Wed, 16 Nov 2022 15:04:29 +0100</lastBuildDate><atom:link href="http://azure.github.io/sustainability/optimize/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Assess</title>
+      <link>http://azure.github.io/sustainability/optimize/assess/</link>
+      <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
+      <guid>http://azure.github.io/sustainability/optimize/assess/</guid>
+      <description>By evaluating the run-state architecture and configuration, you can maximize the sustainability of your workload. The end result of this step is to get recommendations on how to strengthen the workload sustainability posture with the following objectives:
+Understand workload sustainability risk, Identify ways to reduce workload carbon emissions, Prioritize actions to reduce workload carbon footprint. Azure Well-Architected Sustainability Review The Well-Architected Assessments target a specific Azure workload and share a common delivery approach with focus on critical areas within the specific tenant (cost, reliability, operations, security, sustainability) of the framework.</description>
+    </item>
+    <item>
+      <title>Design</title>
+      <link>http://azure.github.io/sustainability/optimize/design/</link>
+      <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
+      <guid>http://azure.github.io/sustainability/optimize/design/</guid>
+      <description>Use the recommendations out of the Microsoft Azure Well-Architected Sustainability Review and consider the Azure Well-Architected Framework guidance for sustainable workloads to guide your architecture and build a diagram illustrating how the customer’s existing structure can be made sustainable using sustainable best practices.
+Tip Review the sustainability guidance specific to Azure Kubernetes Service when building new or improving workload hosted on Azure Kubernetes Service and ensure the following:
+Include all customer&amp;rsquo;s requirements in your solution, Include candidate roadmap components and explain which will be introduced to the current architectural landscape, Resolve the changes across the architecture landscape: what will be removed, retired and/or maintained.</description>
+    </item>
+    <item>
+      <title>Checklist</title>
+      <link>http://azure.github.io/sustainability/optimize/checklist/</link>
+      <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
+      <guid>http://azure.github.io/sustainability/optimize/checklist/</guid>
+      <description>At the end of this step, teams should have a proposed solution diagram that illustrates how the customer’s existing structure can be made sustainable in Azure using sustainable best practices and:
+✔️ Includes all the customer&amp;rsquo;s requirements.
+✔️ Includes candidate roadmap components and explains which will be introduced to the current architectural landscape.
+✔️ Resolves the changes across the architecture landscape: what will be removed, retired and/or maintained.</description>
+    </item>
+  </channel>
+</rss>

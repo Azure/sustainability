@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.105.0">
+    <meta name="generator" content="Relearn 5.5.3">
+    <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+    <meta name="description" content="Learn how to build or optimize applications on Azure with sustainability in mind">
+    <meta name="author" content="Microsoft Open Source Community">
+    <title>Build green software applications on Azure</title>
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/sustainability/css/fontawesome-all.min.css?1669174935" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/sustainability/css/fontawesome-all.min.css?1669174935" rel="stylesheet"></noscript>
+    <link href="/sustainability/css/featherlight.min.css?1669174935" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/sustainability/css/featherlight.min.css?1669174935" rel="stylesheet"></noscript>
+    <link href="/sustainability/css/auto-complete.css?1669174935" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/sustainability/css/auto-complete.css?1669174935" rel="stylesheet"></noscript>
+    <link href="/sustainability/css/perfect-scrollbar.min.css?1669174935" rel="stylesheet">
+    <link href="/sustainability/css/nucleus.css?1669174935" rel="stylesheet">
+    <link href="/sustainability/css/fonts.css?1669174935" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/sustainability/css/fonts.css?1669174935" rel="stylesheet"></noscript>
+    <link href="/sustainability/css/theme.css?1669174935" rel="stylesheet">
+    <link href="/sustainability/css/theme-blue-variant.css?1669174935" rel="stylesheet" id="variant-style">
+    <link href="/sustainability/css/ie.css?1669174935" rel="stylesheet">
+    <link href="/sustainability/css/variant.css?1669174935" rel="stylesheet">
+    <link href="/sustainability/css/print.css?1669174935" rel="stylesheet" media="print">
+    <script src="/sustainability/js/variant.js?1669174935"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_json_url="/sustainability/index.json";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      // some further base stuff
+      var baseUriFull='http:\/\/azure.github.io\/sustainability/';
+      window.variants && variants.init( [ 'blue-variant' ] );
+    </script>
+    <script src="/sustainability/js/jquery.min.js?1669174935" defer></script>
+  </head>
+  <body class="mobile-support html" data-url="/sustainability/optimize/carbon-awareness/carbon-intensity-data/">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <span class="links">
+              
+            </span>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1></h1>
+
+<h1 id="carbon-intensity-data">Carbon Intensity Data</h1>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="sidebar" class="default-animation showVisitedLinks" dir="ltr">
+      <div id="header-wrapper" class="default-animation">
+        <div id="header" class="default-animation">
+          <style>
+            #logo svg,
+            #logo svg * {
+              color: #ffffff;
+              color: var(--MENU-SECTIONS-BG-color);
+              fill: #ffffff !important;
+              fill: var(--MENU-SECTIONS-BG-color) !important;
+              opacity: .945;
+            }
+            a#logo {
+              color: #ffffff;
+              color: var(--MENU-SECTIONS-BG-color);
+              font-family: 'Work Sans', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+              font-size: 20px;
+              font-weight: 500;
+              margin-top: 5px;
+              max-width: 100%;
+              text-transform: none;
+              width: 226px;
+              white-space: nowrap;
+            }
+            a#logo:hover {
+              color: #ffffff;
+              color: var(--MENU-SECTIONS-BG-color);
+            }
+            #logo svg {
+              margin-bottom: -20px;
+              margin-left: -23.5px;
+              width: 40.5%;
+            }
+            @media only all and (max-width: 59.938em) {
+              a#logo {
+                font-size: 25px;
+                margin-top: -3px;
+              }
+              #logo svg {
+                margin-bottom: -12px;
+                margin-left: -23px;
+              }
+            }
+            @media all and (-ms-high-contrast:none) {
+              /* IE11s understanding of positioning is weird at best */
+              a#logo {
+                margin-top: -58px;
+              }
+              #logo svg {
+                margin-bottom: -62px;
+              }
+            }
+          </style>
+          
+        </div>
+        <div class="searchbox default-animation">
+          <label class="a11y-only" for="search-by">Search</label>
+          <i class="fas fa-search"></i>
+          <input data-search-input id="search-by" type="search" placeholder="Search...">
+          <span data-search-clear=""><i class="fas fa-times"></i></span>
+        </div>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="/sustainability/js/auto-complete.js?1669174935" defer></script>
+        <script src="/sustainability/js/lunr.min.js?1669174935" defer></script>
+        <script src="/sustainability/js/lunr.stemmer.support.min.js?1669174935" defer></script>
+        <script src="/sustainability/js/lunr.multi.min.js?1669174935" defer></script>
+        <script src="/sustainability/js/lunr.en.min.js?1669174935" defer></script>
+        <script src="/sustainability/js/search.js?1669174935" defer></script>
+      </div>
+      <div id="content-wrapper" class="highlightable">
+        <ul class="topics collapsible-menu">
+          <li data-nav-id="/sustainability/overview/" class="dd-item"><input type="checkbox" id="section-802c60793ff0af3dfb7211e666dc12f4" aria-controls="subsections-802c60793ff0af3dfb7211e666dc12f4" class="toggle"><label class="a11y-only toggle" for="section-802c60793ff0af3dfb7211e666dc12f4" >Submenu Overview</label><a href="/sustainability/overview/index.html">Overview<i class="fas fa-check read-icon"></i></a><ul id="subsections-802c60793ff0af3dfb7211e666dc12f4">
+          <li data-nav-id="/sustainability/overview/about-this-workshop/" class="dd-item"><a href="/sustainability/overview/about-this-workshop/index.html">About this workshop<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/sustainability/overview/about-our-commitments/" class="dd-item"><a href="/sustainability/overview/about-our-commitments/index.html">About our commitments<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/sustainability/overview/about-green-software/" class="dd-item"><a href="/sustainability/overview/about-green-software/index.html">About green software<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/sustainability/concepts/" class="dd-item"><input type="checkbox" id="section-dc8a1c63e6da60163016ce21cae1faa0" aria-controls="subsections-dc8a1c63e6da60163016ce21cae1faa0" class="toggle"><label class="a11y-only toggle" for="section-dc8a1c63e6da60163016ce21cae1faa0" >Submenu Concepts</label><a href="/sustainability/concepts/index.html">Concepts<i class="fas fa-check read-icon"></i></a><ul id="subsections-dc8a1c63e6da60163016ce21cae1faa0">
+          <li data-nav-id="/sustainability/concepts/design-methodologies/" class="dd-item"><a href="/sustainability/concepts/design-methodologies/index.html">Design methodologies<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/sustainability/concepts/design-principles/" class="dd-item"><a href="/sustainability/concepts/design-principles/index.html">Design principles<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/sustainability/concepts/design-areas/" class="dd-item"><a href="/sustainability/concepts/design-areas/index.html">Design areas<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/sustainability/scenario/" class="dd-item"><input type="checkbox" id="section-40f44de92bd75878f4e041d9b778b373" aria-controls="subsections-40f44de92bd75878f4e041d9b778b373" class="toggle"><label class="a11y-only toggle" for="section-40f44de92bd75878f4e041d9b778b373" >Submenu Scenario</label><a href="/sustainability/scenario/index.html">Scenario<i class="fas fa-check read-icon"></i></a><ul id="subsections-40f44de92bd75878f4e041d9b778b373">
+          <li data-nav-id="/sustainability/scenario/case-study/" class="dd-item"><a href="/sustainability/scenario/case-study/index.html">Case study<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/sustainability/scenario/current-environment/" class="dd-item"><a href="/sustainability/scenario/current-environment/index.html">Current environment<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/sustainability/scenario/checklist/" class="dd-item"><a href="/sustainability/scenario/checklist/index.html">Checklist<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/sustainability/optimize/" class="dd-item parent"><input type="checkbox" id="section-61f47f715cab1075cd91f86869648fc0" aria-controls="subsections-61f47f715cab1075cd91f86869648fc0" class="toggle" checked><label class="a11y-only toggle" for="section-61f47f715cab1075cd91f86869648fc0" >Submenu Optimize</label><a href="/sustainability/optimize/index.html">Optimize<i class="fas fa-check read-icon"></i></a><ul id="subsections-61f47f715cab1075cd91f86869648fc0">
+          <li data-nav-id="/sustainability/optimize/assess/" class="dd-item"><a href="/sustainability/optimize/assess/index.html">Assess<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/sustainability/optimize/design/" class="dd-item"><a href="/sustainability/optimize/design/index.html">Design<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/sustainability/optimize/checklist/" class="dd-item"><a href="/sustainability/optimize/checklist/index.html">Checklist<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/sustainability/optimize/carbon-awareness/carbon-intensity-data/" class="dd-item active"><a href="/sustainability/optimize/carbon-awareness/carbon-intensity-data/index.html"><i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/sustainability/present/" class="dd-item"><input type="checkbox" id="section-428b1fe25566f9954c66af864a146989" aria-controls="subsections-428b1fe25566f9954c66af864a146989" class="toggle"><label class="a11y-only toggle" for="section-428b1fe25566f9954c66af864a146989" >Submenu Present</label><a href="/sustainability/present/index.html">Present<i class="fas fa-check read-icon"></i></a><ul id="subsections-428b1fe25566f9954c66af864a146989">
+          <li data-nav-id="/sustainability/present/prepare-presentation/" class="dd-item"><a href="/sustainability/present/prepare-presentation/index.html">Prepare presentation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/sustainability/present/closeout/" class="dd-item"><a href="/sustainability/present/closeout/index.html">Closeout<i class="fas fa-check read-icon"></i></a></li></ul></li>
+        </ul>
+        <div class="footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
+        <hr class="default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter">
+        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVisitedLinks">
+          <ul>
+            <li id="select-language-container" class="footerLangSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-language">Language</label>
+                  <select id="select-language" onchange="location = baseUri + this.value;">
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+            </li>
+            <li id="select-variant-container" class="footerVariantSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-paint-brush fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-variant">Theme</label>
+                  <select id="select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                    <option id="blue-variant" value="blue-variant" selected>Blue Variant</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+              <script>window.variants && variants.markSelectedVariant();</script>
+            </li>
+            <li class="footerVisitedLinks showVisitedLinks"><button class="padding" onclick="clearHistory();"><i class="fas fa-history fa-fw"></i> Clear History</button></li>
+          </ul>
+        </div>
+        <div id="footer" class="footerFooter showFooter">
+<p><center>Microsoft Open Source Community</a></center></p>
+        </div>
+      </div>
+    </aside>
+    <script src="/sustainability/js/clipboard.min.js?1669174935" defer></script>
+    <script src="/sustainability/js/perfect-scrollbar.min.js?1669174935" defer></script>
+    <script src="/sustainability/js/featherlight.min.js?1669174935" defer></script>
+    <script>
+      function useMathJax( config ){
+        if( !Object.assign ){
+          
+          return;
+        }
+        window.MathJax = Object.assign( window.MathJax || {}, {
+          loader: {
+            load: ['[tex]/mhchem']
+          },
+          startup: {
+            elements: [
+              '.math'
+            ]
+          },
+          tex: {
+            inlineMath: [
+              ['$', '$'], 
+              ['\\(', '\\)']
+            ]
+          },
+          options: {
+            enableMenu: false 
+          }
+        }, config );
+      }
+      useMathJax( JSON.parse("{}") );
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/sustainability/js/jquery.svg.pan.zoom.js?1669174935" defer></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js" defer></script>
+    <script>
+      window.themeUseMermaid = JSON.parse("{ \"theme\": \"default\" }");
+    </script>
+    <script src="https://unpkg.com/rapidoc/dist/rapidoc-min.js" defer></script>
+    <script>
+      window.themeUseSwagger = JSON.parse("{ \"theme\": \"light\" }");
+    </script>
+    <script src="/sustainability/js/theme.js?1669174935" defer></script>
+  </body>
+</html>

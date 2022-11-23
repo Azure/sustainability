@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Present on Build green software applications on Azure</title>
+    <link>http://azure.github.io/sustainability/present/</link>
+    <description>Recent content in Present on Build green software applications on Azure</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Microsoft Open Source Community</copyright>
+    <lastBuildDate>Wed, 16 Nov 2022 15:04:29 +0100</lastBuildDate><atom:link href="http://azure.github.io/sustainability/present/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Prepare presentation</title>
+      <link>http://azure.github.io/sustainability/present/prepare-presentation/</link>
+      <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
+      <guid>http://azure.github.io/sustainability/present/prepare-presentation/</guid>
+      <description>In this step, groups prepare for the final presentation using the following presentation checklist.
+Checklist Your final presentation must include the following slides.
+1. The customer case study
+Customer case study key points. Main characteristics of the current customer environment. Solutions to customer needs. Responses to customer objections. 2. Architect a solution
+Proposed solution diagram that meets or exceeds all the customer requirements from the case study and customer needs sections.</description>
+    </item>
+    <item>
+      <title>Closeout</title>
+      <link>http://azure.github.io/sustainability/present/closeout/</link>
+      <pubDate>Wed, 16 Nov 2022 15:04:29 +0100</pubDate>
+      <guid>http://azure.github.io/sustainability/present/closeout/</guid>
+      <description>The groups take turns presenting and the others role-play as the customer in the meantime by asking questions, providing feedback. Take notes about your team’s strengths and areas of improvement.</description>
+    </item>
+  </channel>
+</rss>
