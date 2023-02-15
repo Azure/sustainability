@@ -1,0 +1,13 @@
+baseURL = 'https://wiigg.dev/bssazure/'
+languageCode = 'en-gb'
+title = 'Building Sustainable Solutions on Azure'
+theme = 'relearn'
+
+# For search functionality
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[params]
+themeVariant = [ "relearn-dark" ]
+showVisitedLinks = true
+collapsibleMenu = true
