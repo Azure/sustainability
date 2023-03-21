@@ -23,3 +23,7 @@ docker-build-server-image: docker-buildx-builder
 		--platform="$(BUILDPLATFORM)" \
 		--pull \
 		--tag $(REGISTRY)/$(SERVER_IMG_NAME):$(SERVERIMG_TAG) .
+
+
+build:
+	go build -o _output/bin/carbon-data-provider ./cmd/carbon-data-provider/
