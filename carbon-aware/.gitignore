@@ -25,3 +25,4 @@ _testmain.go
 
 *.travis.yml
 *git_push.sh
+_output
