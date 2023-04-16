@@ -1,14 +1,32 @@
-# Project
+## Introduction
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+Hello and welcome to Azure’s GitHub repository on sustainability! Here you will see some of the current projects that we are working on as well as tutorials on how to get started with sustainability on Azure. If you have any questions, plese feel free to use our [GitHub Issue board](https://github.com/Azure/sustainability/issues). Thank you!
 
-As the maintainer of this project, please make a few updates:
+## Getting started with Sustainable software engineering on Azure
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+-	[The principles of sustainable software engineering](https://learn.microsoft.com/en-us/training/modules/sustainable-software-engineering-overview/)
+
+-	[Azure Well-Architected Framework for sustainable workloads](https://learn.microsoft.com/en-us/azure/architecture/framework/sustainability/)
+
+For instructions on how to set up any of our current projects, please navigate to the appropriate repository and read the README.md file.
+
+## Azure sustainable engineering hackathon
+
+ - Follow the [sustainable engineering hackathon on Azure] : https://azure.github.io/sustainability/
+
+
+## Current sustainable engineering enablers for Kubernetes / AKS
+
+- [Sustainable software engineering principles for AKS](https://learn.microsoft.com/en-us/azure/aks/concepts-sustainable-software-engineering)
+
+-	[Kubernetes-Carbon-Intensity-Exporter](Azure/kubernetes-carbon-intensity-exporter). - This carbon aware exporter uses the Green Software Foundation SDK to pull WattTime data and load it into a configmap to be used with the carbon aware KEDA operator.
+
+-	[Carbon-Aware-Keda-Operator](Azure/carbon-aware-keda-operator (github.com)) - This is a KEDA operator that reads carbon intensity data from a configmap and scales the maxReplicas accordingly to whether carbon intensity is low or high. 
+
+For instructions on how to set up any of our current projects, please navigate to the appropriate repository and read the README.md file.
+
+
+
 
 ## Contributing
 
