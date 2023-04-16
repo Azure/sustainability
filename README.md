@@ -17,7 +17,7 @@ Hello and welcome to Azure’s GitHub repository on sustainability! Here you wil
 
 - [Sustainable software engineering principles for AKS](https://learn.microsoft.com/en-us/azure/aks/concepts-sustainable-software-engineering)
 
--	[Kubernetes-Carbon-Intensity-Exporter](https://github.com/Azure/kubernetes-carbon-intensity-exporter/). - This carbon aware exporter uses the Green Software Foundation SDK to pull WattTime data and load it into a configmap to be used with the carbon aware KEDA operator.
+-	[Kubernetes-Carbon-Intensity-Exporter](https://github.com/Azure/kubernetes-carbon-intensity-exporter/). - This carbon aware exporter uses the Green Software Foundation SDK to pull WattTime data and load it into a configmap to be used with the carbon aware KEDA operator, or any other workload for carbon aware decision making.
 
 -	[Carbon-Aware-Keda-Operator](https://github.com/Azure/carbon-aware-keda-operator/) - This is a KEDA operator that reads carbon intensity data from a configmap and scales the maxReplicas accordingly to whether carbon intensity is low or high. 
 
