@@ -8,8 +8,6 @@ Hello and welcome to Azure’s GitHub repository on sustainability! Here you wil
 
 -	[Azure Well-Architected Framework for sustainable workloads](https://learn.microsoft.com/en-us/azure/architecture/framework/sustainability/)
 
-For instructions on how to set up any of our current projects, please navigate to the appropriate repository and read the README.md file.
-
 ## Azure sustainable engineering hackathon
 
  - Follow the [sustainable engineering hackathon on Azure] : https://azure.github.io/sustainability/
@@ -23,7 +21,9 @@ For instructions on how to set up any of our current projects, please navigate t
 
 -	[Carbon-Aware-Keda-Operator](Azure/carbon-aware-keda-operator (github.com)) - This is a KEDA operator that reads carbon intensity data from a configmap and scales the maxReplicas accordingly to whether carbon intensity is low or high. 
 
-For instructions on how to set up any of our current projects, please navigate to the appropriate repository and read the README.md file.
+
+
+> For instructions on how to set up any of our current projects, please navigate to the appropriate repository and read the README.md file.
 
 
 
