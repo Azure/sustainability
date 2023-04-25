@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Customer scenario on Building Sustainable Solutions on Azure</title>
+    <link>https://wiigg.dev/bssazure/scenario/index.html</link>
+    <description>Recent content in Customer scenario on Building Sustainable Solutions on Azure</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 22 Sep 2022 15:46:25 +0100</lastBuildDate><atom:link href="https://wiigg.dev/bssazure/scenario/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Case study</title>
+      <link>https://wiigg.dev/bssazure/scenario/casestudy/index.html</link>
+      <pubDate>Thu, 22 Sep 2022 12:45:35 +0100</pubDate>
+      <guid>https://wiigg.dev/bssazure/scenario/casestudy/index.html</guid>
+      <description>Directions Read the customer case study and current customer environment. Identify the key points of the customer case study and current environment. Use the table after the case study to make any relevant notes. Build one or two slides in preparation for the final presentation (Step 4) including the following: Customer case study key points. Main characteristics of the current customer environment. Note The focus of this step is becoming familiar with customer case study, while Step 2 is dedicated to solution architecture.</description>
+    </item>
+    <item>
+      <title>Current environment</title>
+      <link>https://wiigg.dev/bssazure/scenario/environ/index.html</link>
+      <pubDate>Thu, 22 Sep 2022 15:11:42 +0100</pubDate>
+      <guid>https://wiigg.dev/bssazure/scenario/environ/index.html</guid>
+      <description>The lead architect from your customer’s organisation provides a diagram of the current state of their environment:</description>
+    </item>
+    <item>
+      <title>Customer needs</title>
+      <link>https://wiigg.dev/bssazure/scenario/needs/index.html</link>
+      <pubDate>Thu, 22 Sep 2022 12:46:12 +0100</pubDate>
+      <guid>https://wiigg.dev/bssazure/scenario/needs/index.html</guid>
+      <description>Directions Your customer provides a list of their needs. The team has a solution-focused discussion about this new information.
+Discuss solutions for the customer needs using your notes and considering the following questions: Are there any additional needs that aren’t explicitly provided by the customer? What can we infer? How could we address these needs? Build a slide with solutions to customer needs for the final presentation (Step 4). Personas Dianna, Chief Information Officer (CIO) Minimize costs where possible, particularly when service demand is low.</description>
+    </item>
+    <item>
+      <title>Customer objections</title>
+      <link>https://wiigg.dev/bssazure/scenario/objections/index.html</link>
+      <pubDate>Thu, 22 Sep 2022 12:46:00 +0100</pubDate>
+      <guid>https://wiigg.dev/bssazure/scenario/objections/index.html</guid>
+      <description>Directions You’ve been provided a consolidated list of customer’s objections that were collected throughout the discovery process.
+Discuss each customer objection and determine possible responses. Build a slide with responses to customer objections for the final presentation (Step 4). Objections How can we analyze whether this project will reduce our carbon emissions? Any reason for us to consider PaaS over moving the application as-is to IaaS? Have we considered alternative architectures for the application?</description>
+    </item>
+    <item>
+      <title>Checklist</title>
+      <link>https://wiigg.dev/bssazure/scenario/checklist/index.html</link>
+      <pubDate>Thu, 22 Sep 2022 15:46:25 +0100</pubDate>
+      <guid>https://wiigg.dev/bssazure/scenario/checklist/index.html</guid>
+      <description>At the end of this step, teams should have the following slides prepared:
+Customer case study key points. Main characteristics of current customer environment. Solutions for customer needs. Responses to customer objections. </description>
+    </item>
+    <item>
+      <title>Resources</title>
+      <link>https://wiigg.dev/bssazure/scenario/resources/index.html</link>
+      <pubDate>Thu, 22 Sep 2022 12:49:59 +0100</pubDate>
+      <guid>https://wiigg.dev/bssazure/scenario/resources/index.html</guid>
+      <description> Microsoft 2021 Environmental Sustainability Report Azure Sustainability The Carbon Benefits of Cloud Computing: a Study of the Microsoft Cloud Microsoft Sustainability Learning Center </description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.103.1">
+    <meta name="generator" content="Relearn 5.6.6+tip">
+    <meta name="description" content="">
+    <title>Architect a solution :: Building Sustainable Solutions on Azure</title>
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/bssazure/css/fontawesome-all.min.css?1669261850" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/bssazure/css/fontawesome-all.min.css?1669261850" rel="stylesheet"></noscript>
+    <link href="/bssazure/css/featherlight.min.css?1669261850" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/bssazure/css/featherlight.min.css?1669261850" rel="stylesheet"></noscript>
+    <link href="/bssazure/css/auto-complete.css?1669261850" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/bssazure/css/auto-complete.css?1669261850" rel="stylesheet"></noscript>
+    <link href="/bssazure/css/perfect-scrollbar.min.css?1669261850" rel="stylesheet">
+    <link href="/bssazure/css/nucleus.css?1669261850" rel="stylesheet">
+    <link href="/bssazure/css/fonts.css?1669261850" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/bssazure/css/fonts.css?1669261850" rel="stylesheet"></noscript>
+    <link href="/bssazure/css/theme.css?1669261850" rel="stylesheet">
+    <link href="/bssazure/css/theme-relearn-dark.css?1669261850" rel="stylesheet" id="variant-style">
+    <link href="/bssazure/css/ie.css?1669261850" rel="stylesheet">
+    <link href="/bssazure/css/variant.css?1669261850" rel="stylesheet">
+    <link href="/bssazure/css/print.css?1669261850" rel="stylesheet" media="print">
+    <script src="/bssazure/js/url.js?1669261850"></script>
+    <script src="/bssazure/js/variant.js?1669261850"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_json_url="/bssazure/index.json";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/wiigg.dev\/bssazure/';
+      window.variants && variants.init( [ 'relearn-dark' ] );
+    </script>
+    <script src="/bssazure/js/jquery.min.js?1669261850" defer></script>
+  </head>
+  <body class="mobile-support html" data-url="/bssazure/design/architect/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div class="navigation">
+            <a class="nav nav-next" href="/bssazure/design/checklist/index.html" title="Checklist (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
+          </div>
+          <div class="navigation">
+            <a class="nav nav-prev" href="/bssazure/design/index.html" title="Design solution (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
+          </div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/bssazure/index.html"><span itemprop="name">Welcome</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/bssazure/design/index.html"><span itemprop="name">Design solution</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Architect a solution</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+          <div class="default-animation progress">
+            <div class="toc-wrapper" dir="ltr">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="architect-a-solution">Architect a solution</h1>
+
+<h5 id="directions">Directions</h5>
+<ul>
+<li>Use the discussion questions to guide your architecture.</li>
+<li>As a team, build a diagram illustrating how the customer’s existing structure can be made sustainable using sustainable best practices.</li>
+</ul>
+<p>Requirements:</p>
+<ul>
+<li>Include all the elements from Step 1 to build your solution.</li>
+<li>Include candidate roadmap components and explain which will be introduced to the current architectural landscape.</li>
+<li>Resolve the changes across the architecture landscape: what will be removed, retired and/or maintained.</li>
+</ul>
+
+<div class="box notices cstyle tip">
+    <div class="box-label"><i class="fa-fw fas fa-lightbulb"></i> Tip</div>
+    <div class="box-content">
+<p>You can use PowerPoint or any other tool: Visio, <a href="https://app.diagrams.net/">Draw.io</a>, <a href="https://www.lucidchart.com/pages/landing/flowchart-software">LucidChart</a> or <a href="https://cacoo.com/">Cacoo</a>.</p>
+    </div>
+</div>
+<h5 id="discussion-questions">Discussion questions</h5>
+<ol>
+<li>What tools are available to help measure the emissions of existing on-premises environments? How can emissions be measured in Azure?</li>
+<li>As solution designers and engineers, what do you have control over when it comes to sustainability in Azure? How does that contrast to that which Microsoft can control?</li>
+<li>What tradeoffs are required to support sustainability goals while meeting business requirements?</li>
+<li>How should you pick a suitable region to deploy to? Consider network access patterns.</li>
+<li>What VM SKUs are available to support your workload? Do these translate to energy efficiency improvements? Are more appropriate services that match your workloads profile available?</li>
+<li>What scaling patterns should you implement? What tools are available to identify underutilized, redundant and non-critical capacity?</li>
+<li>How can you manage updates and patching across all of your Azure services? What are the benefits of doing so from a sustainability angle?</li>
+<li>What changes can you make to optimize your applications to minimize resource usage, beyond their overall architecture?</li>
+</ol>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="sidebar" class="default-animation showVisitedLinks" dir="ltr">
+      <div id="header-wrapper" class="default-animation">
+        <div id="header" class="default-animation">
+<head>
+    <link rel="stylesheet" href="/bssazure/css/logo.css">
+</head>
+
+<div class="container">
+    <img src="/bssazure/images/logo-backg.png" alt="logo background" style="width:100%;">
+    <div class="centered">Building Sustainable Solutions on Azure</div>
+</div>
+        </div>
+        <div class="searchbox default-animation">
+          <i class="fas fa-search" title="Search (CTRL+ALT+f)"></i>
+          <label class="a11y-only" for="search-by">Search</label>
+          <input data-search-input id="search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+          <span data-search-clear=""><i class="fas fa-times"></i></span>
+        </div>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="/bssazure/js/auto-complete.js?1669261850" defer></script>
+        <script src="/bssazure/js/lunr.min.js?1669261850" defer></script>
+        <script src="/bssazure/js/lunr.stemmer.support.min.js?1669261850" defer></script>
+        <script src="/bssazure/js/lunr.multi.min.js?1669261850" defer></script>
+        <script src="/bssazure/js/lunr.en.min.js?1669261850" defer></script>
+        <script src="/bssazure/js/search.js?1669261850" defer></script>
+      </div>
+      <div id="homelinks" class="default-animation">
+        <ul>
+          <li><a class="padding" href="/bssazure/index.html"><i class="fas fa-home"></i> Home</a></li>
+        </ul>
+      </div>
+      <div id="content-wrapper" class="highlightable">
+        <ul class="topics collapsible-menu">
+          <li data-nav-id="/bssazure/introduction/index.html" class="dd-item"><input type="checkbox" id="section-db5db1cf4b1800282ddcebf5cde99c36" aria-controls="subsections-db5db1cf4b1800282ddcebf5cde99c36" class="toggle"><label class="a11y-only toggle" for="section-db5db1cf4b1800282ddcebf5cde99c36" >Submenu Introduction</label><a href="/bssazure/introduction/index.html">1. Introduction<i class="fas fa-check read-icon"></i></a><ul id="subsections-db5db1cf4b1800282ddcebf5cde99c36">
+          <li data-nav-id="/bssazure/introduction/about/index.html" class="dd-item"><a href="/bssazure/introduction/about/index.html">About this workshop<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/bssazure/introduction/objectives/index.html" class="dd-item"><a href="/bssazure/introduction/objectives/index.html">Learning objectives<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/bssazure/scenario/index.html" class="dd-item"><input type="checkbox" id="section-40f44de92bd75878f4e041d9b778b373" aria-controls="subsections-40f44de92bd75878f4e041d9b778b373" class="toggle"><label class="a11y-only toggle" for="section-40f44de92bd75878f4e041d9b778b373" >Submenu Customer scenario</label><a href="/bssazure/scenario/index.html">2. Customer scenario<i class="fas fa-check read-icon"></i></a><ul id="subsections-40f44de92bd75878f4e041d9b778b373">
+          <li data-nav-id="/bssazure/scenario/casestudy/index.html" class="dd-item"><a href="/bssazure/scenario/casestudy/index.html">Case study<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/bssazure/scenario/environ/index.html" class="dd-item"><a href="/bssazure/scenario/environ/index.html">Current environment<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/bssazure/scenario/needs/index.html" class="dd-item"><a href="/bssazure/scenario/needs/index.html">Customer needs<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/bssazure/scenario/objections/index.html" class="dd-item"><a href="/bssazure/scenario/objections/index.html">Customer objections<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/bssazure/scenario/checklist/index.html" class="dd-item"><a href="/bssazure/scenario/checklist/index.html">Checklist<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/bssazure/scenario/resources/index.html" class="dd-item"><a href="/bssazure/scenario/resources/index.html">Resources<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/bssazure/design/index.html" class="dd-item parent"><input type="checkbox" id="section-d25739b54eec6c54b486058b3e2f3701" aria-controls="subsections-d25739b54eec6c54b486058b3e2f3701" class="toggle" checked><label class="a11y-only toggle" for="section-d25739b54eec6c54b486058b3e2f3701" >Submenu Design solution</label><a href="/bssazure/design/index.html">3. Design solution<i class="fas fa-check read-icon"></i></a><ul id="subsections-d25739b54eec6c54b486058b3e2f3701">
+          <li data-nav-id="/bssazure/design/architect/index.html" class="dd-item active"><a href="/bssazure/design/architect/index.html">Architect a solution<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/bssazure/design/checklist/index.html" class="dd-item"><a href="/bssazure/design/checklist/index.html">Checklist<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/bssazure/design/resources/index.html" class="dd-item"><a href="/bssazure/design/resources/index.html">Resources<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/bssazure/optimise/index.html" class="dd-item"><input type="checkbox" id="section-22f193ce93c63269eb3b78828ec73b69" aria-controls="subsections-22f193ce93c63269eb3b78828ec73b69" class="toggle"><label class="a11y-only toggle" for="section-22f193ce93c63269eb3b78828ec73b69" >Submenu Optimise architecture</label><a href="/bssazure/optimise/index.html">4. Optimise architecture<i class="fas fa-check read-icon"></i></a><ul id="subsections-22f193ce93c63269eb3b78828ec73b69">
+          <li data-nav-id="/bssazure/optimise/waf/index.html" class="dd-item"><a href="/bssazure/optimise/waf/index.html">Apply WAF practices<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/bssazure/optimise/checklist/index.html" class="dd-item"><a href="/bssazure/optimise/checklist/index.html">Checklist<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/bssazure/optimise/resources/index.html" class="dd-item"><a href="/bssazure/optimise/resources/index.html">Resources<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/bssazure/present/index.html" class="dd-item"><input type="checkbox" id="section-428b1fe25566f9954c66af864a146989" aria-controls="subsections-428b1fe25566f9954c66af864a146989" class="toggle"><label class="a11y-only toggle" for="section-428b1fe25566f9954c66af864a146989" >Submenu Present proposal</label><a href="/bssazure/present/index.html">5. Present proposal<i class="fas fa-check read-icon"></i></a><ul id="subsections-428b1fe25566f9954c66af864a146989">
+          <li data-nav-id="/bssazure/present/prepare/index.html" class="dd-item"><a href="/bssazure/present/prepare/index.html">Prepare presentation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/bssazure/present/proposal/index.html" class="dd-item"><a href="/bssazure/present/proposal/index.html">Present proposal<i class="fas fa-check read-icon"></i></a></li></ul></li>
+        </ul>
+        <div class="footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
+        <hr class="default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter">
+        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVisitedLinks">
+          <ul>
+            <li id="select-language-container" class="footerLangSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-language">Language</label>
+                  <select id="select-language" onchange="location = baseUri + this.value;">
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+            </li>
+            <li id="select-variant-container" class="footerVariantSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-paint-brush fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-variant">Theme</label>
+                  <select id="select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                    <option id="relearn-dark" value="relearn-dark" selected>Relearn Dark</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+              <script>window.variants && variants.markSelectedVariant();</script>
+            </li>
+            <li class="footerVisitedLinks showVisitedLinks"><button class="padding" onclick="clearHistory();"><i class="fas fa-history fa-fw"></i> Clear History</button></li>
+          </ul>
+        </div>
+        <div id="footer" class="footerFooter showFooter">
+	    <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+        </div>
+      </div>
+    </aside>
+    <script src="/bssazure/js/clipboard.min.js?1669261850" defer></script>
+    <script src="/bssazure/js/perfect-scrollbar.min.js?1669261850" defer></script>
+    <script src="/bssazure/js/featherlight.min.js?1669261850" defer></script>
+    <script src="/bssazure/js/theme.js?1669261850" defer></script>
+  </body>
+</html>

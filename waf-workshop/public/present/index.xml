@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Present proposal on Building Sustainable Solutions on Azure</title>
+    <link>https://wiigg.dev/bssazure/present/index.html</link>
+    <description>Recent content in Present proposal on Building Sustainable Solutions on Azure</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 22 Sep 2022 12:48:26 +0100</lastBuildDate><atom:link href="https://wiigg.dev/bssazure/present/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Prepare presentation</title>
+      <link>https://wiigg.dev/bssazure/present/prepare/index.html</link>
+      <pubDate>Thu, 22 Sep 2022 12:48:26 +0100</pubDate>
+      <guid>https://wiigg.dev/bssazure/present/prepare/index.html</guid>
+      <description>Directions Groups prepare for the final presentation using the presentation checklist. Presentation checklist Warning Your final presentation must include the following slides.
+Step 1. The customer case study Customer case study key points. Main characteristics of the current customer environment. Solutions to customer needs. Responses to customer objections. Step 2. Architect a solution Proposed solution diagram that meets or exceeds all the customer requirements from the case study and customer needs sections.</description>
+    </item>
+    <item>
+      <title>Present proposal</title>
+      <link>https://wiigg.dev/bssazure/present/proposal/index.html</link>
+      <pubDate>Thu, 22 Sep 2022 12:48:16 +0100</pubDate>
+      <guid>https://wiigg.dev/bssazure/present/proposal/index.html</guid>
+      <description>Directions Groups take turns presenting. The group not presenting: Role-plays as the customer. Asks questions. Provides feedback. Use the worksheet to take notes about your team’s strengths and areas of improvement. Teams share their presentation. </description>
+    </item>
+  </channel>
+</rss>

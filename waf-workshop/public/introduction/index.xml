@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on Building Sustainable Solutions on Azure</title>
+    <link>https://wiigg.dev/bssazure/introduction/index.html</link>
+    <description>Recent content in Introduction on Building Sustainable Solutions on Azure</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 22 Sep 2022 14:38:32 +0100</lastBuildDate><atom:link href="https://wiigg.dev/bssazure/introduction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About this workshop</title>
+      <link>https://wiigg.dev/bssazure/introduction/about/index.html</link>
+      <pubDate>Thu, 22 Sep 2022 12:51:11 +0100</pubDate>
+      <guid>https://wiigg.dev/bssazure/introduction/about/index.html</guid>
+      <description>The consequences of climate change are increasingly apparent, from wildfires to devastating flooding; and the scientific consensus is clear—to avert the worst effects of the rapidly changing climate, the world needs to transition to a net zero carbon emissions economy by 2050.
+In this 3x3 (three hours a day for three days) virtual workshop, you will learn about building sustainable solutions on Azure and how they can be designed with compliance, governance, and security practices in mind.</description>
+    </item>
+    <item>
+      <title>Learning objectives</title>
+      <link>https://wiigg.dev/bssazure/introduction/objectives/index.html</link>
+      <pubDate>Thu, 22 Sep 2022 14:38:32 +0100</pubDate>
+      <guid>https://wiigg.dev/bssazure/introduction/objectives/index.html</guid>
+      <description>At the end of this workshop, you will enhance your knowledge to perform the following tasks in your role:
+Lead a sustainability focused Architecture Design Session (ADS) with customers. Design a solution architecture that meets customer requirements and addresses customer objections and limitations. Given a customer case study, identify solutions for customers’ requirements including customer constraints or objections. Apply best practices, patterns, tools, and other resources instrumental in designing better customer solutions to improve deliverable quality as well as efficiency of delivery and execution of the final product.</description>
+    </item>
+  </channel>
+</rss>
