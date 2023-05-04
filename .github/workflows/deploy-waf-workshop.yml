@@ -51,6 +51,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
+          cd waf-workshop
           hugo \
           --gc \
           --minify \
