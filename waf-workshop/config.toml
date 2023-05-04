@@ -1,7 +1,8 @@
-baseURL = 'https://wiigg.dev/bssazure/'
+baseURL = 'https://azure.github.io/sustainability/'
 languageCode = 'en-gb'
 title = 'Building Sustainable Solutions on Azure'
 theme = 'relearn'
+author = 'Danny Wigg'
 
 # For search functionality
 [outputs]
