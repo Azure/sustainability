@@ -7,4 +7,4 @@ weight: 3
 
 The lead architect from your customer’s organisation provides a diagram of the current state of their environment:
 
-![On-premises architecture](/images/onprem-design.png "on-premises architecture")
+![On-premises architecture](sustainability/images/onprem-design.png "on-premises architecture")
